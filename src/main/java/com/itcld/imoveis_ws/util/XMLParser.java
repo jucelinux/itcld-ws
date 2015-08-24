@@ -17,7 +17,9 @@ public class XMLParser {
 		@SuppressWarnings("unchecked")
 		JAXBElement<Object> jaxbElement = new JAXBElement<Object>(new QName(null, qName), objClass, obj);
 		
-		
+		if(tipo.equals(TipoImobiliaria.I123){
+			
+		}
 		marshaller.marshal(jaxbElement, System.out);
 	}
 
