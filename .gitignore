@@ -57,3 +57,9 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+.classpath
+.project
+.settings/org.eclipse.core.resources.prefs
+*.prefs
+.settings/org.eclipse.wst.common.project.facet.core.xml
+*.lst

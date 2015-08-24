@@ -1,0 +1,345 @@
+<xs:schema attributeFormDefault="unqualified"
+	elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://itcld.com/imoveis-ws/schema/123i" targetNamespace="http://itcld.com/imoveis-ws/schema/123i">
+
+	<xs:element name="imovel123iResponse">
+		<xs:complexType>
+			<xs:sequence>
+			    <xs:element name="StatusCod" type="xs:int" />
+				<xs:element name="Status"    type="xs:string" />
+				<xs:element name="UrlArquivo"    type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="imovel123iRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element type="tns:Carga" name="Carga" minOccurs="1" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="Carga">
+		<xs:sequence>
+			<xs:element name="Imoveis" minOccurs="1" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element type="tns:Imovel" name="Imovel" minOccurs="1" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:simpleType name="TipoImovel">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Apartamento"/>
+            <xs:enumeration value="Casa"/>
+            <xs:enumeration value="Terreno"/>
+            <xs:enumeration value="Rural"/>
+            <xs:enumeration value="Galpao"/>
+            <xs:enumeration value="Negocio"/>
+            <xs:enumeration value="Escritorio"/>
+            <xs:enumeration value="Loja"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="Imovel">
+		<xs:sequence>
+			<xs:element type="xs:string" name="CodigoCliente" minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:string" name="CodigoImovel"  minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:string" name="CategoriaImovel" minOccurs="1" maxOccurs="1"/>
+			<xs:element type="tns:TipoImovel" name="TipoImovel" minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:string" name="SubTipoImovel" minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:string" name="Cidade" minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:string" name="Bairro" minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:string" name="Endereco"/>
+			<xs:element type="xs:string" name="Numero"/>
+			<xs:element type="xs:long"   name="CEP" minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:double" name="PrecoVenda" minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:double" name="PrecoLocacao" minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:double" name="PrecoCondominio" minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:double" name="IptuAnual"/>
+			<xs:element type="xs:long"   name="QtdDormitorios" minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:long"   name="QtdSuites" minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:string" name="QtdSalas" minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:long"   name="QtdBanheiros" minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:string" name="QtdUnidadesAndar" minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:long"   name="AnoConstrucao" minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:long"   name="QtdVagas" minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:double"  name="AreaUtil" minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:double"  name="AreaTotal" minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:double"  name="TituloImovel"/>
+			<xs:element type="xs:string" name="Observacao" minOccurs="1" maxOccurs="1"/>
+			
+			<xs:element type="tns:Fotos" name="Fotos" minOccurs="0" maxOccurs="1"/>
+			<xs:element type="tns:Condominio" name="Condominio" minOccurs="0" maxOccurs="1"/>
+			<xs:element type="tns:Unidade" name="Unidade" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Fotos">
+		<xs:sequence>
+			<xs:element name="Foto" type="tns:Foto" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Foto">
+		<xs:sequence>
+			<xs:element type="xs:string" name="NomeArquivo" />
+			<xs:element type="xs:string" name="URLArquivo" />
+			<xs:element type="xs:int" name="Principal" />
+		</xs:sequence>
+	</xs:complexType>
+    
+	<xs:complexType name="Condominio">
+		<xs:sequence>
+			<xs:element type="xs:long" name="AcademiaFitness" />
+				<xs:element type="xs:long" name="AcessoDeficiente" />
+				<xs:element type="xs:long" name="Administradora" />
+				<xs:element type="xs:long" name="AndaresPredio" />
+				<xs:element type="xs:long" name="AreaVerde" />
+				<xs:element type="xs:long" name="AutomacaoPredial" />
+				<xs:element type="xs:long" name="Bicicletario" />
+				<xs:element type="xs:long" name="Brinquedoteca" />
+				<xs:element type="xs:long" name="CampoFutebol" />
+				<xs:element type="xs:long" name="CampoGolfe" />
+				<xs:element type="xs:long" name="CasaBoneca" />
+				<xs:element type="xs:long" name="Caseiro" />
+				<xs:element type="xs:long" name="CentralLimpezaGovernanca" />
+				<xs:element type="xs:long" name="CentralTelefonica" />
+				<xs:element type="xs:long" name="CentroEstetica" />
+				<xs:element type="xs:long" name="ChildrenCare" />
+				<xs:element type="xs:long" name="Churrasqueira" />
+				<xs:element type="xs:long" name="CoffeeShop" />
+				<xs:element type="xs:long" name="EdificioInteligente" />
+				<xs:element type="xs:long" name="EscritorioVirtual" />
+				<xs:element type="xs:long" name="EspacoGourmet" />
+				<xs:element type="xs:long" name="EspacoZen" />
+				<xs:element type="xs:long" name="GarageBand" />
+				<xs:element type="xs:long" name="Gerador" />
+				<xs:element type="xs:long" name="Guarita" />
+				<xs:element type="xs:long" name="Heliponto" />
+				<xs:element type="xs:long" name="Horta" />
+				<xs:element type="xs:long" name="InternetCompartilhada" />
+				<xs:element type="xs:long" name="Jardim" />
+				<xs:element type="xs:long" name="Lanhouse" />
+				<xs:element type="xs:long" name="Lavanderia" />
+				<xs:element type="xs:long" name="Marina" />
+				<xs:element type="xs:long" name="Massagista" />
+				<xs:element type="xs:long" name="MiniArvorismo" />
+				<xs:element type="xs:long" name="NumeroTorres" />
+				<xs:element type="xs:long" name="OfficeSpace" />
+				<xs:element type="xs:long" name="PermiteAnimais" />
+				<xs:element type="xs:long" name="PersonalTraining" />
+				<xs:element type="xs:long" name="Pesqueiro" />
+				<xs:element type="xs:long" name="PetPlay" />
+				<xs:element type="xs:long" name="PianoBar" />
+				<xs:element type="xs:long" name="Piscina" />
+				<xs:element type="xs:long" name="PiscinaAquecida" />
+				<xs:element type="xs:long" name="PiscinaClimatizada" />
+				<xs:element type="xs:long" name="PiscinaCoberta" />
+				<xs:element type="xs:long" name="PiscinaInfantil" />
+				<xs:element type="xs:long" name="PistaCooper" />
+				<xs:element type="xs:long" name="PistaSkate" />
+				<xs:element type="xs:long" name="Playground" />
+				<xs:element type="xs:long" name="Pomar" />
+				<xs:element type="xs:long" name="Portaria24h" />
+				<xs:element type="xs:long" name="PortariaControlada" />
+				<xs:element type="xs:long" name="PostoBancario" />
+				<xs:element type="xs:long" name="QuadraPoliesportiva" />
+				<xs:element type="xs:long" name="QuadraSquash" />
+				<xs:element type="xs:long" name="QuadraTenis" />
+				<xs:element type="xs:long" name="QuantidadeElevadores" />
+				<xs:element type="xs:long" name="Redario" />
+				<xs:element type="xs:long" name="RedeTelefonica" />
+				<xs:element type="xs:long" name="Restaurante" />
+				<xs:element type="xs:long" name="RuasAsfaltadas" />
+				<xs:element type="xs:long" name="SalaCinema" />
+				<xs:element type="xs:long" name="SalaGinastica" />
+				<xs:element type="xs:long" name="SalaoConvencoes" />
+				<xs:element type="xs:long" name="SalaoFestas" />
+				<xs:element type="xs:long" name="SalaoJogos" />
+				<xs:element type="xs:long" name="SalaReunioes" />
+				<xs:element type="xs:long" name="SalaTV" />
+				<xs:element type="xs:long" name="Sauna" />
+				<xs:element type="xs:long" name="ServicosEscritorio" />
+				<xs:element type="xs:long" name="SistemaAlarme" />
+				<xs:element type="xs:long" name="SistemaIncendio" />
+				<xs:element type="xs:long" name="Solarium" />
+				<xs:element type="xs:long" name="VagaDeVisitante" />
+				<xs:element type="xs:long" name="Vestiario" />
+				<xs:element type="xs:long" name="VestiarioEmpregado" />
+				<xs:element type="xs:long" name="Vigilancia24h" />
+			</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType  name="Unidade">
+		<xs:sequence>
+			<xs:element type="xs:long" name="AcademiaFitness" />
+			<xs:element type="xs:long" name="Acesso" />
+			<xs:element type="xs:long" name="Administradora" />
+			<xs:element type="xs:long" name="AguaEncanada" />
+			<xs:element type="xs:long" name="AndarInteiro" />
+			<xs:element type="xs:long" name="Aquecedor" />
+			<xs:element type="xs:long" name="AquecimentoCentral" />
+			<xs:element type="xs:long" name="ArCondicionado" />
+			<xs:element type="xs:long" name="ArCondicionadoCentral" />
+			<xs:element type="xs:long" name="ArCondicionadoEmbutido" />
+			<xs:element type="xs:long" name="ArCondicionadoSplit" />
+			<xs:element type="xs:long" name="AreaDeServico" />
+			<xs:element type="xs:long" name="AreaVerde" />
+			<xs:element type="xs:long" name="ArmarioDeCozinha" />
+			<xs:element type="xs:long" name="ArmarioEmbutido" />
+			<xs:element type="xs:long" name="Banheira" />
+			<xs:element type="xs:long" name="BanheiraComChuveiro" />
+			<xs:element type="xs:long" name="Bar" />
+			<xs:element type="xs:long" name="Biblioteca" />
+			<xs:element type="xs:long" name="Bicicletario" />
+			<xs:element type="xs:long" name="BoaPastagem" />
+			<xs:element type="xs:long" name="Brinquedoteca" />
+			<xs:element type="xs:long" name="Cachoeira" />
+			<xs:element type="xs:long" name="CampoFutebol" />
+			<xs:element type="xs:long" name="CampoGolfe" />
+			<xs:element type="xs:long" name="Carpete" />
+			<xs:element type="xs:long" name="CarpeteMadeira" />
+			<xs:element type="xs:long" name="CasaBoneca" />
+			<xs:element type="xs:long" name="CasaCaseiro" />
+			<xs:element type="xs:long" name="CasaFundo" />
+			<xs:element type="xs:long" name="CasaSede" />
+			<xs:element type="xs:long" name="Caseiro" />
+			<xs:element type="xs:long" name="Celeiro" />
+			<xs:element type="xs:long" name="CentralLimpezaGovernanca" />
+			<xs:element type="xs:long" name="CentralTelefonica" />
+			<xs:element type="xs:long" name="CentroEstetica" />
+			<xs:element type="xs:long" name="ChildrenCare" />
+			<xs:element type="xs:long" name="ChurrasqueiraUnidade" />
+			<xs:element type="xs:long" name="Closet" />
+			<xs:element type="xs:long" name="CoffeeShop" />
+			<xs:element type="xs:long" name="Conservacao" />
+			<xs:element type="xs:long" name="Construcao" />
+			<xs:element type="xs:long" name="Copa" />
+			<xs:element type="xs:long" name="CozinhaAmericana" />
+			<xs:element type="xs:long" name="CozinhaGourmet" />
+			<xs:element type="xs:long" name="CozinhaIndependente" />
+			<xs:element type="xs:long" name="Curral" />
+			<xs:element type="xs:long" name="DependenciaEmpregados" />
+			<xs:element type="xs:long" name="Deposito" />
+			<xs:element type="xs:long" name="DepositoSubsolo" />
+			<xs:element type="xs:long" name="Desck" />
+			<xs:element type="xs:long" name="Despensa" />
+			<xs:element type="xs:long" name="Ducha" />
+			<xs:element type="xs:long" name="Edicula" />
+			<xs:element type="xs:long" name="EmQualAndar" />
+			<xs:element type="xs:long" name="EnergiaEletrica" />
+			<xs:element type="xs:long" name="EntradaCaminhoes" />
+			<xs:element type="xs:long" name="Escritorio" />
+			<xs:element type="xs:long" name="EscritorioVirtual" />
+			<xs:element type="xs:long" name="EspacoGourmet" />
+			<xs:element type="xs:long" name="EspacoZen" />
+			<xs:element type="xs:long" name="EstradaAsfaltada" />
+			<xs:element type="xs:long" name="EstruturaRede" />
+			<xs:element type="xs:long" name="Fitness" />
+			<xs:element type="xs:long" name="Fogao" />
+			<xs:element type="xs:long" name="FogaoEletrico" />
+			<xs:element type="xs:long" name="FornoPizza" />
+			<xs:element type="xs:long" name="Freezer" />
+			<xs:element type="xs:long" name="FrenteMar" />
+			<xs:element type="xs:long" name="Galpao" />
+			<xs:element type="xs:long" name="GarageBand" />
+			<xs:element type="xs:long" name="GasEncanado" />
+			<xs:element type="xs:long" name="Geladeira" />
+			<xs:element type="xs:long" name="Geminada" />
+			<xs:element type="xs:long" name="Gerador" />
+			<xs:element type="xs:long" name="Heliponto" />
+			<xs:element type="xs:long" name="Hidromassagem" />
+			<xs:element type="xs:long" name="HomeTheater" />
+			<xs:element type="xs:long" name="Horta" />
+			<xs:element type="xs:long" name="InternetWireless" />
+			<xs:element type="xs:long" name="InternetCompartilhada" />
+			<xs:element type="xs:long" name="Isolada" />
+			<xs:element type="xs:long" name="Jardim" />
+			<xs:element type="xs:long" name="Lago" />
+			<xs:element type="xs:long" name="LanHouse" />
+			<xs:element type="xs:long" name="Lareira" />
+			<xs:element type="xs:long" name="Lavabo" />
+			<xs:element type="xs:long" name="LavaLouca" />
+			<xs:element type="xs:long" name="Lavanderia" />
+			<xs:element type="xs:long" name="Lavoura" />
+			<xs:element type="xs:long" name="LuzEletrica" />
+			<xs:element type="xs:long" name="Marina" />
+			<xs:element type="xs:long" name="MeioAndar" />
+			<xs:element type="xs:long" name="Mezanino" />
+			<xs:element type="xs:long" name="Microondas" />
+			<xs:element type="xs:long" name="MiniArvorismo" />
+			<xs:element type="xs:long" name="Mobiliado" />
+			<xs:element type="xs:long" name="Paiol" />
+			<xs:element type="xs:long" name="Pasto" />
+			<xs:element type="xs:long" name="Patio" />
+			<xs:element type="xs:long" name="PeDireitoAlto" />
+			<xs:element type="xs:long" name="Pesqueiro" />
+			<xs:element type="xs:long" name="PetPlay" />
+			<xs:element type="xs:long" name="Piscina" />
+			<xs:element type="xs:long" name="PiscinaAquecida" />
+			<xs:element type="xs:long" name="PiscinaClimatizada" />
+			<xs:element type="xs:long" name="PiscinaCoberta" />
+			<xs:element type="xs:long" name="PiscinaInfantil" />
+			<xs:element type="xs:long" name="PisoElevado" />
+			<xs:element type="xs:long" name="PisoFrio" />
+			<xs:element type="xs:long" name="PisoLaminado" />
+			<xs:element type="xs:long" name="PisoMadeira" />
+			<xs:element type="xs:long" name="PistaCooper" />
+			<xs:element type="xs:long" name="PistaSkate" />
+			<xs:element type="xs:long" name="Playground" />
+			<xs:element type="xs:long" name="Poco" />
+			<xs:element type="xs:long" name="PocoArtesiano" />
+			<xs:element type="xs:long" name="Pomar" />
+			<xs:element type="xs:long" name="PostoBancario" />
+			<xs:element type="xs:long" name="QuadraEsportes" />
+			<xs:element type="xs:long" name="QuadraPoliesportiva" />
+			<xs:element type="xs:long" name="QuadraSquash" />
+			<xs:element type="xs:long" name="QuadraTenis" />
+			<xs:element type="xs:long" name="QuartoEmpregada" />
+			<xs:element type="xs:long" name="Quintal" />
+			<xs:element type="xs:double" name="Recuo" />
+			<xs:element type="xs:long" name="Redario" />
+			<xs:element type="xs:long" name="RedeAltaTensao" />
+			<xs:element type="xs:long" name="RedeTelefonica" />
+			<xs:element type="xs:long" name="ReservatorioAgua" />
+			<xs:element type="xs:long" name="Restaurante" />
+			<xs:element type="xs:long" name="Rio" />
+			<xs:element type="xs:long" name="SalaAlmoco" />
+			<xs:element type="xs:long" name="SalaCinema" />
+			<xs:element type="xs:long" name="SalaGinastica" />
+			<xs:element type="xs:long" name="SalaIntima" />
+			<xs:element type="xs:long" name="SalaJantar" />
+			<xs:element type="xs:long" name="SalaoConvencoes" />
+			<xs:element type="xs:long" name="SalaoFestas" />
+			<xs:element type="xs:long" name="SalaoJogos" />
+			<xs:element type="xs:long" name="SalaReunioes" />
+			<xs:element type="xs:long" name="SalaTV" />
+			<xs:element type="xs:long" name="Sauna" />
+			<xs:element type="xs:long" name="Silos" />
+			<xs:element type="xs:long" name="SistemaAlarme" />
+			<xs:element type="xs:long" name="SistemaEsgoto" />
+			<xs:element type="xs:long" name="SistemaIncendio" />
+			<xs:element type="xs:long" name="Solarium" />
+			<xs:element type="xs:long" name="TelefoneDDR" />
+			<xs:element type="xs:long" name="Telhado" />
+			<xs:element type="xs:long" name="TerrasAraveis" />
+			<xs:element type="xs:long" name="Topografia" />
+			<xs:element type="xs:long" name="TVaCabo" />
+			<xs:element type="xs:long" name="VagaDeVisitante" />
+			<xs:element type="xs:long" name="Varanda" />
+			<xs:element type="xs:long" name="VarandaChurrasqueira" />
+			<xs:element type="xs:long" name="VarandaFechadaVidro" />
+			<xs:element type="xs:long" name="VarandaGourmet" />
+			<xs:element type="xs:long" name="VarandaIntegradaCozinha" />
+			<xs:element type="xs:long" name="Vestiario" />
+			<xs:element type="xs:long" name="Vista" />
+			<xs:element type="xs:long" name="WcEmpregados" />
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>
