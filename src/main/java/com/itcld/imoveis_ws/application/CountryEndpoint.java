@@ -12,19 +12,17 @@ import com.itcld.imoveis_ws.schema.country.Country;
 import com.itcld.imoveis_ws.schema.country.GetCountryRequest;
 import com.itcld.imoveis_ws.schema.country.GetCountryResponse;
 import com.itcld.imoveis_ws.util.TipoImobiliaria;
-import com.itcld.imoveis_ws.util.XMLParser;
 
 @Endpoint
 public class CountryEndpoint {
 	private static final String NAMESPACE_URI = "http://itcld.com/imoveis-ws/schema/country";
-
-	private CountryRepository countryRepository;
+	
+	
 	private Country country;
-
 	@Autowired
-	public CountryEndpoint(CountryRepository countryRepository) {
-		this.countryRepository = countryRepository;
-	}
+	private CountryRepository countryRepository;
+	@Autowired
+	XML2File parser;
 
 	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "getCountryRequest")
 	@ResponsePayload
@@ -33,12 +31,7 @@ public class CountryEndpoint {
 		this.country = countryRepository.findCountry(request.getName());
 		response.setCountry(this.country);
 
-		try {
-			XMLParser.marshall(country.getClass(), country, "country", TipoImobiliaria.I123);
-		} catch (JAXBException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		parser.marshall(country.getClass(), country, "country", TipoImobiliaria.COUNTRY);
 		
 		return response;
 	}

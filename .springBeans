@@ -10,6 +10,7 @@
 		<config>java:com.itcld.imoveis_ws.application.Application</config>
 		<config>java:com.itcld.imoveis_ws.application.CountryRepository</config>
 		<config>java:com.itcld.imoveis_ws.application.WebServiceConfig</config>
+		<config>java:com.itcld.imoveis_ws.application.XML2File</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

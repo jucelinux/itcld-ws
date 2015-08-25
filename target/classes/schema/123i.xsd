@@ -68,9 +68,11 @@
 			<xs:element type="xs:string" name="QtdUnidadesAndar" minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long"   name="AnoConstrucao" minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long"   name="QtdVagas" minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:long"   name="QtdAndar" minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:long"   name="QtdElevador" minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:double"  name="AreaUtil" minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:double"  name="AreaTotal" minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:double"  name="TituloImovel"/>
+			<xs:element type="xs:string"  name="TituloImovel"/>
 			<xs:element type="xs:string" name="Observacao" minOccurs="1" maxOccurs="1"/>
 			
 			<xs:element type="tns:Fotos" name="Fotos" minOccurs="0" maxOccurs="1"/>

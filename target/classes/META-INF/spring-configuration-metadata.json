@@ -1,0 +1,34 @@
+{
+  "groups": [{
+    "name": "folders",
+    "type": "com.itcld.imoveis_ws.util.FolderConfig",
+    "sourceType": "com.itcld.imoveis_ws.util.FolderConfig"
+  }],
+  "properties": [
+    {
+      "name": "folders.dir-bossa-nova",
+      "type": "java.lang.String",
+      "sourceType": "com.itcld.imoveis_ws.util.FolderConfig"
+    },
+    {
+      "name": "folders.dir-country",
+      "type": "java.lang.String",
+      "sourceType": "com.itcld.imoveis_ws.util.FolderConfig"
+    },
+    {
+      "name": "folders.dir-imovel-web",
+      "type": "java.lang.String",
+      "sourceType": "com.itcld.imoveis_ws.util.FolderConfig"
+    },
+    {
+      "name": "folders.dir-moving",
+      "type": "java.lang.String",
+      "sourceType": "com.itcld.imoveis_ws.util.FolderConfig"
+    },
+    {
+      "name": "folders.dir123i",
+      "type": "java.lang.String",
+      "sourceType": "com.itcld.imoveis_ws.util.FolderConfig"
+    }
+  ]
+}

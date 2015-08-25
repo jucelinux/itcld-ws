@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.7 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2015.08.17 às 04:01:11 PM BRT 
+// Gerado em: 2015.08.25 às 05:00:45 PM BRT 
 //
 
 
@@ -45,9 +45,11 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="QtdUnidadesAndar" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="AnoConstrucao" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="QtdVagas" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="QtdAndar" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="QtdElevador" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="AreaUtil" type="{http://www.w3.org/2001/XMLSchema}double"/>
  *         &lt;element name="AreaTotal" type="{http://www.w3.org/2001/XMLSchema}double"/>
- *         &lt;element name="TituloImovel" type="{http://www.w3.org/2001/XMLSchema}double"/>
+ *         &lt;element name="TituloImovel" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="Observacao" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="Fotos" type="{http://itcld.com/imoveis-ws/schema/123i}Fotos" minOccurs="0"/>
  *         &lt;element name="Condominio" type="{http://itcld.com/imoveis-ws/schema/123i}Condominio" minOccurs="0"/>
@@ -83,6 +85,8 @@ import javax.xml.bind.annotation.XmlType;
     "qtdUnidadesAndar",
     "anoConstrucao",
     "qtdVagas",
+    "qtdAndar",
+    "qtdElevador",
     "areaUtil",
     "areaTotal",
     "tituloImovel",
@@ -135,12 +139,16 @@ public class Imovel {
     protected long anoConstrucao;
     @XmlElement(name = "QtdVagas")
     protected long qtdVagas;
+    @XmlElement(name = "QtdAndar")
+    protected long qtdAndar;
+    @XmlElement(name = "QtdElevador")
+    protected long qtdElevador;
     @XmlElement(name = "AreaUtil")
     protected double areaUtil;
     @XmlElement(name = "AreaTotal")
     protected double areaTotal;
-    @XmlElement(name = "TituloImovel")
-    protected double tituloImovel;
+    @XmlElement(name = "TituloImovel", required = true)
+    protected String tituloImovel;
     @XmlElement(name = "Observacao", required = true)
     protected String observacao;
     @XmlElement(name = "Fotos")
@@ -575,6 +583,38 @@ public class Imovel {
     }
 
     /**
+     * Obtém o valor da propriedade qtdAndar.
+     * 
+     */
+    public long getQtdAndar() {
+        return qtdAndar;
+    }
+
+    /**
+     * Define o valor da propriedade qtdAndar.
+     * 
+     */
+    public void setQtdAndar(long value) {
+        this.qtdAndar = value;
+    }
+
+    /**
+     * Obtém o valor da propriedade qtdElevador.
+     * 
+     */
+    public long getQtdElevador() {
+        return qtdElevador;
+    }
+
+    /**
+     * Define o valor da propriedade qtdElevador.
+     * 
+     */
+    public void setQtdElevador(long value) {
+        this.qtdElevador = value;
+    }
+
+    /**
      * Obtém o valor da propriedade areaUtil.
      * 
      */
@@ -609,16 +649,24 @@ public class Imovel {
     /**
      * Obtém o valor da propriedade tituloImovel.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public double getTituloImovel() {
+    public String getTituloImovel() {
         return tituloImovel;
     }
 
     /**
      * Define o valor da propriedade tituloImovel.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTituloImovel(double value) {
+    public void setTituloImovel(String value) {
         this.tituloImovel = value;
     }
 
