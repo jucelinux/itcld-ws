@@ -63,3 +63,6 @@ $RECYCLE.BIN/
 *.prefs
 .settings/org.eclipse.wst.common.project.facet.core.xml
 *.lst
+
+#Pastas de criação de arquivos
+target/

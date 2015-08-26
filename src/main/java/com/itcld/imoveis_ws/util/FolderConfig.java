@@ -10,7 +10,14 @@ public class FolderConfig {
 	private String dir123i;
 	private String dirImovelWeb;
 	private String dirBossaNova;
+	private String dirDefault;
 	
+	public String getDirDefault() {
+		return dirDefault;
+	}
+	public void setDirDefault(String dirDefault) {
+		this.dirDefault = dirDefault;
+	}
 	public String getDirCountry() {
 		return dirCountry;
 	}

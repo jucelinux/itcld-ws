@@ -3,8 +3,8 @@ package com.itcld.imoveis_ws.util;
 public enum TipoImobiliaria {
 	
 	I123(0L,"123i"),
-	BOSSANOVA(1L,"Bossa Nova"),
-	IMOVELWEB(2l, "Imovel Web"),
+	BOSSANOVA(1L,"BossaNova"),
+	IMOVELWEB(2l, "ImovelWeb"),
 	MOVING(3L, "Moving"),
 	COUNTRY(4L,"Country");
 	

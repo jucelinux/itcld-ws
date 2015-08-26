@@ -16,6 +16,11 @@
       "sourceType": "com.itcld.imoveis_ws.util.FolderConfig"
     },
     {
+      "name": "folders.dir-default",
+      "type": "java.lang.String",
+      "sourceType": "com.itcld.imoveis_ws.util.FolderConfig"
+    },
+    {
       "name": "folders.dir-imovel-web",
       "type": "java.lang.String",
       "sourceType": "com.itcld.imoveis_ws.util.FolderConfig"

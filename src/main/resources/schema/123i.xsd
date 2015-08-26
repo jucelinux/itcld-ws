@@ -219,7 +219,7 @@
 			<xs:element type="xs:long" name="ChurrasqueiraUnidade" />
 			<xs:element type="xs:long" name="Closet" />
 			<xs:element type="xs:long" name="CoffeeShop" />
-			<xs:element type="xs:long" name="Conservacao" />
+			<xs:element type="xs:string" name="Conservacao" />
 			<xs:element type="xs:long" name="Construcao" />
 			<xs:element type="xs:long" name="Copa" />
 			<xs:element type="xs:long" name="CozinhaAmericana" />
@@ -252,7 +252,7 @@
 			<xs:element type="xs:long" name="GarageBand" />
 			<xs:element type="xs:long" name="GasEncanado" />
 			<xs:element type="xs:long" name="Geladeira" />
-			<xs:element type="xs:long" name="Geminada" />
+			<xs:element type="xs:string" name="Geminada" />
 			<xs:element type="xs:long" name="Gerador" />
 			<xs:element type="xs:long" name="Heliponto" />
 			<xs:element type="xs:long" name="Hidromassagem" />
@@ -260,7 +260,7 @@
 			<xs:element type="xs:long" name="Horta" />
 			<xs:element type="xs:long" name="InternetWireless" />
 			<xs:element type="xs:long" name="InternetCompartilhada" />
-			<xs:element type="xs:long" name="Isolada" />
+			<xs:element type="xs:string" name="Isolada" />
 			<xs:element type="xs:long" name="Jardim" />
 			<xs:element type="xs:long" name="Lago" />
 			<xs:element type="xs:long" name="LanHouse" />
@@ -330,7 +330,7 @@
 			<xs:element type="xs:long" name="TelefoneDDR" />
 			<xs:element type="xs:long" name="Telhado" />
 			<xs:element type="xs:long" name="TerrasAraveis" />
-			<xs:element type="xs:long" name="Topografia" />
+			<xs:element type="xs:string" name="Topografia" />
 			<xs:element type="xs:long" name="TVaCabo" />
 			<xs:element type="xs:long" name="VagaDeVisitante" />
 			<xs:element type="xs:long" name="Varanda" />
@@ -339,7 +339,7 @@
 			<xs:element type="xs:long" name="VarandaGourmet" />
 			<xs:element type="xs:long" name="VarandaIntegradaCozinha" />
 			<xs:element type="xs:long" name="Vestiario" />
-			<xs:element type="xs:long" name="Vista" />
+			<xs:element type="xs:string" name="Vista" />
 			<xs:element type="xs:long" name="WcEmpregados" />
 		</xs:sequence>
 	</xs:complexType>

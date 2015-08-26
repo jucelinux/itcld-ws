@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.7 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2015.08.25 às 05:00:45 PM BRT 
+// Gerado em: 2015.08.26 às 12:35:59 PM BRT 
 //
 
 
@@ -64,7 +64,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="ChurrasqueiraUnidade" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="Closet" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="CoffeeShop" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="Conservacao" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="Conservacao" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="Construcao" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="Copa" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="CozinhaAmericana" type="{http://www.w3.org/2001/XMLSchema}long"/>
@@ -97,7 +97,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="GarageBand" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="GasEncanado" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="Geladeira" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="Geminada" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="Geminada" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="Gerador" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="Heliponto" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="Hidromassagem" type="{http://www.w3.org/2001/XMLSchema}long"/>
@@ -105,7 +105,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="Horta" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="InternetWireless" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="InternetCompartilhada" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="Isolada" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="Isolada" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="Jardim" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="Lago" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="LanHouse" type="{http://www.w3.org/2001/XMLSchema}long"/>
@@ -175,7 +175,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="TelefoneDDR" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="Telhado" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="TerrasAraveis" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="Topografia" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="Topografia" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="TVaCabo" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="VagaDeVisitante" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="Varanda" type="{http://www.w3.org/2001/XMLSchema}long"/>
@@ -184,7 +184,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="VarandaGourmet" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="VarandaIntegradaCozinha" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="Vestiario" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="Vista" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="Vista" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="WcEmpregados" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -441,8 +441,8 @@ public class Unidade {
     protected long closet;
     @XmlElement(name = "CoffeeShop")
     protected long coffeeShop;
-    @XmlElement(name = "Conservacao")
-    protected long conservacao;
+    @XmlElement(name = "Conservacao", required = true)
+    protected String conservacao;
     @XmlElement(name = "Construcao")
     protected long construcao;
     @XmlElement(name = "Copa")
@@ -507,8 +507,8 @@ public class Unidade {
     protected long gasEncanado;
     @XmlElement(name = "Geladeira")
     protected long geladeira;
-    @XmlElement(name = "Geminada")
-    protected long geminada;
+    @XmlElement(name = "Geminada", required = true)
+    protected String geminada;
     @XmlElement(name = "Gerador")
     protected long gerador;
     @XmlElement(name = "Heliponto")
@@ -523,8 +523,8 @@ public class Unidade {
     protected long internetWireless;
     @XmlElement(name = "InternetCompartilhada")
     protected long internetCompartilhada;
-    @XmlElement(name = "Isolada")
-    protected long isolada;
+    @XmlElement(name = "Isolada", required = true)
+    protected String isolada;
     @XmlElement(name = "Jardim")
     protected long jardim;
     @XmlElement(name = "Lago")
@@ -663,8 +663,8 @@ public class Unidade {
     protected long telhado;
     @XmlElement(name = "TerrasAraveis")
     protected long terrasAraveis;
-    @XmlElement(name = "Topografia")
-    protected long topografia;
+    @XmlElement(name = "Topografia", required = true)
+    protected String topografia;
     @XmlElement(name = "TVaCabo")
     protected long tVaCabo;
     @XmlElement(name = "VagaDeVisitante")
@@ -681,8 +681,8 @@ public class Unidade {
     protected long varandaIntegradaCozinha;
     @XmlElement(name = "Vestiario")
     protected long vestiario;
-    @XmlElement(name = "Vista")
-    protected long vista;
+    @XmlElement(name = "Vista", required = true)
+    protected String vista;
     @XmlElement(name = "WcEmpregados")
     protected long wcEmpregados;
 
@@ -1329,16 +1329,24 @@ public class Unidade {
     /**
      * Obtém o valor da propriedade conservacao.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public long getConservacao() {
+    public String getConservacao() {
         return conservacao;
     }
 
     /**
      * Define o valor da propriedade conservacao.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setConservacao(long value) {
+    public void setConservacao(String value) {
         this.conservacao = value;
     }
 
@@ -1857,16 +1865,24 @@ public class Unidade {
     /**
      * Obtém o valor da propriedade geminada.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public long getGeminada() {
+    public String getGeminada() {
         return geminada;
     }
 
     /**
      * Define o valor da propriedade geminada.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setGeminada(long value) {
+    public void setGeminada(String value) {
         this.geminada = value;
     }
 
@@ -1985,16 +2001,24 @@ public class Unidade {
     /**
      * Obtém o valor da propriedade isolada.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public long getIsolada() {
+    public String getIsolada() {
         return isolada;
     }
 
     /**
      * Define o valor da propriedade isolada.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setIsolada(long value) {
+    public void setIsolada(String value) {
         this.isolada = value;
     }
 
@@ -3105,16 +3129,24 @@ public class Unidade {
     /**
      * Obtém o valor da propriedade topografia.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public long getTopografia() {
+    public String getTopografia() {
         return topografia;
     }
 
     /**
      * Define o valor da propriedade topografia.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTopografia(long value) {
+    public void setTopografia(String value) {
         this.topografia = value;
     }
 
@@ -3249,16 +3281,24 @@ public class Unidade {
     /**
      * Obtém o valor da propriedade vista.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public long getVista() {
+    public String getVista() {
         return vista;
     }
 
     /**
      * Define o valor da propriedade vista.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setVista(long value) {
+    public void setVista(String value) {
         this.vista = value;
     }
 
