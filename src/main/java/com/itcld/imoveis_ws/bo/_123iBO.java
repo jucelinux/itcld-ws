@@ -1,12 +1,12 @@
 package com.itcld.imoveis_ws.bo;
 
-import static com.itcld.imoveis_ws.util.SegmentoImovel.*;
+import static com.itcld.imoveis_ws.util.SegmentoImovel.getSegmentoImovel;
 
 import com.itcld.imoveis_ws.schema._123i.Carga.Imoveis;
-import com.itcld.imoveis_ws.util.SegmentoImovel;
 import com.itcld.imoveis_ws.schema._123i.Imovel;
 import com.itcld.imoveis_ws.schema._123i.Imovel123IRequest;
 import com.itcld.imoveis_ws.schema._123i.Imovel123IResponse;
+import com.itcld.imoveis_ws.util.SegmentoImovel;
 
 public class _123iBO {
 
