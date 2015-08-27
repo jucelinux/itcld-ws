@@ -82,6 +82,9 @@
 					</execution>
 				</executions>
 				<configuration>
+					<vmArgs>
+				       <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
+				   	</vmArgs>
 					<schemaDirectory>${project.basedir}/src/main/resources/schema/</schemaDirectory>
 					<outputDirectory>${project.basedir}/src/main/java</outputDirectory>
 					<clearOutputDir>false</clearOutputDir>

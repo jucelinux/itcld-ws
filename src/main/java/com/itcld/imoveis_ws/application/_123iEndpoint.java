@@ -17,14 +17,13 @@ public class _123iEndpoint {
 	private XML2File parser;
 	
 	private static final String NAMESPACE_URI = "http://itcld.com/imoveis-ws/schema/123i";
+	private static final String QNAME = "Carga";
 	
 	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "imovel123iRequest")
 	@ResponsePayload
 	public Imovel123IResponse imovel123iRequest(@RequestPayload Imovel123IRequest request) {
 		Imovel123IResponse response = new Imovel123IResponse();
-
-		parser.marshall(request.getCarga().getClass(), request.getCarga(), "Carga", TipoImobiliaria.I123);
-		
+		parser.marshall(request.getCarga().getClass(), request.getCarga(), QNAME, TipoImobiliaria.I123);
 		return response;
 	}
 	

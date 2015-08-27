@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.7 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2015.08.26 às 12:35:59 PM BRT 
+// Gerado em: 2015.08.27 às 03:22:07 PM BRT 
 //
 
 
@@ -11,7 +11,10 @@ package com.itcld.imoveis_ws.schema._123i;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import org.w3._2001.xmlschema.Adapter2;
 
 
 /**
@@ -27,7 +30,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="CodigoCliente" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="CodigoImovel" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="CategoriaImovel" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="TipoImovel" type="{http://itcld.com/imoveis-ws/schema/123i}TipoImovel"/>
+ *         &lt;element name="TipoImovel" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="SubTipoImovel" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="Cidade" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="Bairro" type="{http://www.w3.org/2001/XMLSchema}string"/>
@@ -104,7 +107,7 @@ public class Imovel {
     @XmlElement(name = "CategoriaImovel", required = true)
     protected String categoriaImovel;
     @XmlElement(name = "TipoImovel", required = true)
-    protected TipoImovel tipoImovel;
+    protected String tipoImovel;
     @XmlElement(name = "SubTipoImovel", required = true)
     protected String subTipoImovel;
     @XmlElement(name = "Cidade", required = true)
@@ -115,8 +118,10 @@ public class Imovel {
     protected String endereco;
     @XmlElement(name = "Numero", required = true)
     protected String numero;
-    @XmlElement(name = "CEP")
-    protected long cep;
+    @XmlElement(name = "CEP", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter2 .class)
+    @XmlSchemaType(name = "long")
+    protected Long cep;
     @XmlElement(name = "PrecoVenda")
     protected double precoVenda;
     @XmlElement(name = "PrecoLocacao")
@@ -125,24 +130,38 @@ public class Imovel {
     protected double precoCondominio;
     @XmlElement(name = "IptuAnual")
     protected double iptuAnual;
-    @XmlElement(name = "QtdDormitorios")
-    protected long qtdDormitorios;
-    @XmlElement(name = "QtdSuites")
-    protected long qtdSuites;
+    @XmlElement(name = "QtdDormitorios", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter2 .class)
+    @XmlSchemaType(name = "long")
+    protected Long qtdDormitorios;
+    @XmlElement(name = "QtdSuites", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter2 .class)
+    @XmlSchemaType(name = "long")
+    protected Long qtdSuites;
     @XmlElement(name = "QtdSalas", required = true)
     protected String qtdSalas;
-    @XmlElement(name = "QtdBanheiros")
-    protected long qtdBanheiros;
+    @XmlElement(name = "QtdBanheiros", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter2 .class)
+    @XmlSchemaType(name = "long")
+    protected Long qtdBanheiros;
     @XmlElement(name = "QtdUnidadesAndar", required = true)
     protected String qtdUnidadesAndar;
-    @XmlElement(name = "AnoConstrucao")
-    protected long anoConstrucao;
-    @XmlElement(name = "QtdVagas")
-    protected long qtdVagas;
-    @XmlElement(name = "QtdAndar")
-    protected long qtdAndar;
-    @XmlElement(name = "QtdElevador")
-    protected long qtdElevador;
+    @XmlElement(name = "AnoConstrucao", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter2 .class)
+    @XmlSchemaType(name = "long")
+    protected Long anoConstrucao;
+    @XmlElement(name = "QtdVagas", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter2 .class)
+    @XmlSchemaType(name = "long")
+    protected Long qtdVagas;
+    @XmlElement(name = "QtdAndar", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter2 .class)
+    @XmlSchemaType(name = "long")
+    protected Long qtdAndar;
+    @XmlElement(name = "QtdElevador", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter2 .class)
+    @XmlSchemaType(name = "long")
+    protected Long qtdElevador;
     @XmlElement(name = "AreaUtil")
     protected double areaUtil;
     @XmlElement(name = "AreaTotal")
@@ -235,10 +254,10 @@ public class Imovel {
      * 
      * @return
      *     possible object is
-     *     {@link TipoImovel }
+     *     {@link String }
      *     
      */
-    public TipoImovel getTipoImovel() {
+    public String getTipoImovel() {
         return tipoImovel;
     }
 
@@ -247,10 +266,10 @@ public class Imovel {
      * 
      * @param value
      *     allowed object is
-     *     {@link TipoImovel }
+     *     {@link String }
      *     
      */
-    public void setTipoImovel(TipoImovel value) {
+    public void setTipoImovel(String value) {
         this.tipoImovel = value;
     }
 
@@ -377,16 +396,24 @@ public class Imovel {
     /**
      * Obtém o valor da propriedade cep.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public long getCEP() {
+    public Long getCEP() {
         return cep;
     }
 
     /**
      * Define o valor da propriedade cep.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCEP(long value) {
+    public void setCEP(Long value) {
         this.cep = value;
     }
 
@@ -457,32 +484,48 @@ public class Imovel {
     /**
      * Obtém o valor da propriedade qtdDormitorios.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public long getQtdDormitorios() {
+    public Long getQtdDormitorios() {
         return qtdDormitorios;
     }
 
     /**
      * Define o valor da propriedade qtdDormitorios.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setQtdDormitorios(long value) {
+    public void setQtdDormitorios(Long value) {
         this.qtdDormitorios = value;
     }
 
     /**
      * Obtém o valor da propriedade qtdSuites.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public long getQtdSuites() {
+    public Long getQtdSuites() {
         return qtdSuites;
     }
 
     /**
      * Define o valor da propriedade qtdSuites.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setQtdSuites(long value) {
+    public void setQtdSuites(Long value) {
         this.qtdSuites = value;
     }
 
@@ -513,16 +556,24 @@ public class Imovel {
     /**
      * Obtém o valor da propriedade qtdBanheiros.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public long getQtdBanheiros() {
+    public Long getQtdBanheiros() {
         return qtdBanheiros;
     }
 
     /**
      * Define o valor da propriedade qtdBanheiros.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setQtdBanheiros(long value) {
+    public void setQtdBanheiros(Long value) {
         this.qtdBanheiros = value;
     }
 
@@ -553,64 +604,96 @@ public class Imovel {
     /**
      * Obtém o valor da propriedade anoConstrucao.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public long getAnoConstrucao() {
+    public Long getAnoConstrucao() {
         return anoConstrucao;
     }
 
     /**
      * Define o valor da propriedade anoConstrucao.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setAnoConstrucao(long value) {
+    public void setAnoConstrucao(Long value) {
         this.anoConstrucao = value;
     }
 
     /**
      * Obtém o valor da propriedade qtdVagas.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public long getQtdVagas() {
+    public Long getQtdVagas() {
         return qtdVagas;
     }
 
     /**
      * Define o valor da propriedade qtdVagas.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setQtdVagas(long value) {
+    public void setQtdVagas(Long value) {
         this.qtdVagas = value;
     }
 
     /**
      * Obtém o valor da propriedade qtdAndar.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public long getQtdAndar() {
+    public Long getQtdAndar() {
         return qtdAndar;
     }
 
     /**
      * Define o valor da propriedade qtdAndar.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setQtdAndar(long value) {
+    public void setQtdAndar(Long value) {
         this.qtdAndar = value;
     }
 
     /**
      * Obtém o valor da propriedade qtdElevador.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public long getQtdElevador() {
+    public Long getQtdElevador() {
         return qtdElevador;
     }
 
     /**
      * Define o valor da propriedade qtdElevador.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setQtdElevador(long value) {
+    public void setQtdElevador(Long value) {
         this.qtdElevador = value;
     }
 

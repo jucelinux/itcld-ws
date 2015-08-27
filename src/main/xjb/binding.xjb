@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jaxb:bindings version="1.0"
+  xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <jaxb:globalBindings>
+        <!-- Use java.util.Calendar instead of javax.xml.datatype.XMLGregorianCalendar for xs:dateTime -->
+        <jaxb:javaType name="java.util.Calendar" xmlType="xs:dateTime"
+                parseMethod="javax.xml.bind.DatatypeConverter.parseDateTime"
+                printMethod="javax.xml.bind.DatatypeConverter.printDateTime" />
+ 		<jaxb:javaType name="java.lang.Long" xmlType="xs:long"/>
+    </jaxb:globalBindings>
+</jaxb:bindings>

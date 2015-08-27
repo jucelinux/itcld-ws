@@ -63,7 +63,7 @@ public class XML2File {
 		fileName.append(Long.toString(c.getTimeInMillis()));
 		fileName.append(".xml");
 
-		File file = new File(fileName.toString());
+		File file = new File(folder,fileName.toString());
 
 		if (!file.exists()) {
 			try {
@@ -96,7 +96,7 @@ public class XML2File {
 			return folderConfig.getDirMoving();
 		}
 
-		return null;
+		return folderConfig.getDirCountry();
 	}
 
 	private void fechaArquivo(Writer writer) {
