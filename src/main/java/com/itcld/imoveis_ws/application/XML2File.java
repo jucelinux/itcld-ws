@@ -12,6 +12,8 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.namespace.QName;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Component;
@@ -23,12 +25,13 @@ import com.itcld.imoveis_ws.util.TipoImobiliaria;
 @EnableConfigurationProperties(FolderConfig.class)
 public class XML2File {
 
+	private static final Logger logger = LoggerFactory.getLogger(XML2File.class);
+			
 	@Autowired
 	private FolderConfig folderConfig;
 
 	@SuppressWarnings("rawtypes")
 	public void marshall(Class objClass, Object obj, String qName, TipoImobiliaria tipo) {
-		System.out.println(folderConfig.getDir123i());
 		JAXBContext jaxbContext = null;
 		Marshaller marshaller = null;
 		Writer writer = null;
@@ -38,6 +41,7 @@ public class XML2File {
 			marshaller = jaxbContext.createMarshaller();
 			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 		} catch (JAXBException e) {
+			logger.error("Erro ao criar Marshaller: ", e.getCause());
 			e.printStackTrace();
 		}
 		@SuppressWarnings("unchecked")
@@ -47,7 +51,7 @@ public class XML2File {
 		try {
 			marshaller.marshal(jaxbElement, writer);
 		} catch (JAXBException e) {
-			// TODO Auto-generated catch block
+			logger.error("Erro ao fazer parser do arquivo: ", e.getCause());
 			e.printStackTrace();
 		} finally {
 			fechaArquivo(writer);
@@ -64,11 +68,14 @@ public class XML2File {
 		fileName.append(".xml");
 
 		File file = new File(folder,fileName.toString());
-
+		
+		logger.info("Criando arquivo: " + folder + fileName.toString());
+		
 		if (!file.exists()) {
 			try {
 				file.createNewFile();
 			} catch (IOException e) {
+				logger.error("Erro ao criar arquivo físico ", e.getCause());
 				e.printStackTrace();
 			}
 		}
@@ -76,6 +83,7 @@ public class XML2File {
 		try {
 			return new FileWriter(file);
 		} catch (IOException e) {
+			logger.error("Erro ao criar FileWriter ", e.getCause());
 			e.printStackTrace();
 		}
 
@@ -103,6 +111,7 @@ public class XML2File {
 		try {
 			writer.close();
 		} catch (IOException e) {
+			logger.error("Erro ao fechar FileWriter ", e.getCause());
 			e.printStackTrace();
 		}
 	}
