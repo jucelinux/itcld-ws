@@ -6,6 +6,7 @@ import com.itcld.imoveis_ws.schema._123i.Carga.Imoveis;
 import com.itcld.imoveis_ws.schema._123i.Imovel;
 import com.itcld.imoveis_ws.schema._123i.Imovel123IRequest;
 import com.itcld.imoveis_ws.schema._123i.Imovel123IResponse;
+import com.itcld.imoveis_ws.util.AppUtils;
 import com.itcld.imoveis_ws.util.SegmentoImovel;
 
 public class _123iBO {
@@ -34,25 +35,28 @@ public class _123iBO {
 		imovel.setCategoriaImovel(seg.categoria);
 		
 	}
-	
-	private void validaMarina(Imovel imovel) {
 
+	private void validaMarina(Imovel imovel) {
+		if(AppUtils.checkOrConditions(imovel.getUnidade().getMarinaVagaMolhada(), imovel.getUnidade().getMarinaVagaSeca())){
+			imovel.getUnidade().setMarina(1L);
+		}
+		
+		if(AppUtils.checkOrConditions(imovel.getCondominio().getMarinaVagaMolhada(), imovel.getCondominio().getMarinaVagaSeca())){
+			imovel.getCondominio().setMarina(1L);
+		}
+			
 	}
 	
 	private void validaPisoLaminado(Imovel imovel) {
-		
 	}
 
 	private void validaPisoFrio(Imovel imovel) {
-		
 	}
 
 	private void validaPisoMadeira(Imovel imovel) {
-		
 	}
 
 	private void validaCarpete(Imovel imovel) {
-		
 	}
 
 	private void validaFrenteMar(Imovel imovel) {
@@ -60,11 +64,9 @@ public class _123iBO {
 	}
 
 	private void validaArmario(Imovel imovel) {
-		
 	}
 
 	private void validaSauna(Imovel imovel) {
-		
 	}
 	
 }

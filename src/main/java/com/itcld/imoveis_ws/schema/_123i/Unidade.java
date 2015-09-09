@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.7 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2015.09.01 às 11:36:20 AM BRT 
+// Gerado em: 2015.09.09 às 04:01:04 PM BRT 
 //
 
 
@@ -28,11 +28,11 @@ import org.w3._2001.xmlschema.Adapter2;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="AcademiaFitness" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="AcabamentoAreaLazer" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="AcabamentoCozinha" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="AcabamentoLiving" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="AcabamentoBanheiros" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="AcabamentoDormitorios" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="AcabamentoAreaLazer" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="AcabamentoCozinha" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="AcabamentoLiving" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="AcabamentoBanheiros" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="AcabamentoDormitorios" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="Acesso" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="Administradora" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="AguaEncanada" type="{http://www.w3.org/2001/XMLSchema}long"/>
@@ -402,26 +402,16 @@ public class Unidade {
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
     protected Long academiaFitness;
-    @XmlElement(name = "AcabamentoAreaLazer", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter2 .class)
-    @XmlSchemaType(name = "long")
-    protected Long acabamentoAreaLazer;
-    @XmlElement(name = "AcabamentoCozinha", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter2 .class)
-    @XmlSchemaType(name = "long")
-    protected Long acabamentoCozinha;
-    @XmlElement(name = "AcabamentoLiving", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter2 .class)
-    @XmlSchemaType(name = "long")
-    protected Long acabamentoLiving;
-    @XmlElement(name = "AcabamentoBanheiros", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter2 .class)
-    @XmlSchemaType(name = "long")
-    protected Long acabamentoBanheiros;
-    @XmlElement(name = "AcabamentoDormitorios", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter2 .class)
-    @XmlSchemaType(name = "long")
-    protected Long acabamentoDormitorios;
+    @XmlElement(name = "AcabamentoAreaLazer", required = true)
+    protected String acabamentoAreaLazer;
+    @XmlElement(name = "AcabamentoCozinha", required = true)
+    protected String acabamentoCozinha;
+    @XmlElement(name = "AcabamentoLiving", required = true)
+    protected String acabamentoLiving;
+    @XmlElement(name = "AcabamentoBanheiros", required = true)
+    protected String acabamentoBanheiros;
+    @XmlElement(name = "AcabamentoDormitorios", required = true)
+    protected String acabamentoDormitorios;
     @XmlElement(name = "Acesso", required = true, type = String.class)
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
@@ -1135,7 +1125,7 @@ public class Unidade {
      *     {@link String }
      *     
      */
-    public Long getAcabamentoAreaLazer() {
+    public String getAcabamentoAreaLazer() {
         return acabamentoAreaLazer;
     }
 
@@ -1147,7 +1137,7 @@ public class Unidade {
      *     {@link String }
      *     
      */
-    public void setAcabamentoAreaLazer(Long value) {
+    public void setAcabamentoAreaLazer(String value) {
         this.acabamentoAreaLazer = value;
     }
 
@@ -1159,7 +1149,7 @@ public class Unidade {
      *     {@link String }
      *     
      */
-    public Long getAcabamentoCozinha() {
+    public String getAcabamentoCozinha() {
         return acabamentoCozinha;
     }
 
@@ -1171,7 +1161,7 @@ public class Unidade {
      *     {@link String }
      *     
      */
-    public void setAcabamentoCozinha(Long value) {
+    public void setAcabamentoCozinha(String value) {
         this.acabamentoCozinha = value;
     }
 
@@ -1183,7 +1173,7 @@ public class Unidade {
      *     {@link String }
      *     
      */
-    public Long getAcabamentoLiving() {
+    public String getAcabamentoLiving() {
         return acabamentoLiving;
     }
 
@@ -1195,7 +1185,7 @@ public class Unidade {
      *     {@link String }
      *     
      */
-    public void setAcabamentoLiving(Long value) {
+    public void setAcabamentoLiving(String value) {
         this.acabamentoLiving = value;
     }
 
@@ -1207,7 +1197,7 @@ public class Unidade {
      *     {@link String }
      *     
      */
-    public Long getAcabamentoBanheiros() {
+    public String getAcabamentoBanheiros() {
         return acabamentoBanheiros;
     }
 
@@ -1219,7 +1209,7 @@ public class Unidade {
      *     {@link String }
      *     
      */
-    public void setAcabamentoBanheiros(Long value) {
+    public void setAcabamentoBanheiros(String value) {
         this.acabamentoBanheiros = value;
     }
 
@@ -1231,7 +1221,7 @@ public class Unidade {
      *     {@link String }
      *     
      */
-    public Long getAcabamentoDormitorios() {
+    public String getAcabamentoDormitorios() {
         return acabamentoDormitorios;
     }
 
@@ -1243,7 +1233,7 @@ public class Unidade {
      *     {@link String }
      *     
      */
-    public void setAcabamentoDormitorios(Long value) {
+    public void setAcabamentoDormitorios(String value) {
         this.acabamentoDormitorios = value;
     }
 

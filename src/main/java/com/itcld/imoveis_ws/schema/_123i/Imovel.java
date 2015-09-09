@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.7 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2015.09.01 às 11:36:20 AM BRT 
+// Gerado em: 2015.09.09 às 04:01:04 PM BRT 
 //
 
 
@@ -35,7 +35,7 @@ import org.w3._2001.xmlschema.Adapter2;
  *         &lt;element name="Cidade" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="Bairro" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="Endereco" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="Numero" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="Numero" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="CEP" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="PrecoVenda" type="{http://www.w3.org/2001/XMLSchema}double"/>
  *         &lt;element name="PrecoLocacao" type="{http://www.w3.org/2001/XMLSchema}double"/>
@@ -43,7 +43,7 @@ import org.w3._2001.xmlschema.Adapter2;
  *         &lt;element name="IptuAnual" type="{http://www.w3.org/2001/XMLSchema}double"/>
  *         &lt;element name="QtdDormitorios" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="QtdSuites" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="QtdSalas" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="QtdSalas" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="QtdBanheiros" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="QtdUnidadesAndar" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="AnoConstrucao" type="{http://www.w3.org/2001/XMLSchema}long"/>
@@ -116,8 +116,10 @@ public class Imovel {
     protected String bairro;
     @XmlElement(name = "Endereco", required = true)
     protected String endereco;
-    @XmlElement(name = "Numero", required = true)
-    protected String numero;
+    @XmlElement(name = "Numero", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter2 .class)
+    @XmlSchemaType(name = "long")
+    protected Long numero;
     @XmlElement(name = "CEP", required = true, type = String.class)
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
@@ -138,8 +140,10 @@ public class Imovel {
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
     protected Long qtdSuites;
-    @XmlElement(name = "QtdSalas", required = true)
-    protected String qtdSalas;
+    @XmlElement(name = "QtdSalas", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter2 .class)
+    @XmlSchemaType(name = "long")
+    protected Long qtdSalas;
     @XmlElement(name = "QtdBanheiros", required = true, type = String.class)
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
@@ -377,7 +381,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public String getNumero() {
+    public Long getNumero() {
         return numero;
     }
 
@@ -389,7 +393,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public void setNumero(String value) {
+    public void setNumero(Long value) {
         this.numero = value;
     }
 
@@ -537,7 +541,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public String getQtdSalas() {
+    public Long getQtdSalas() {
         return qtdSalas;
     }
 
@@ -549,7 +553,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public void setQtdSalas(String value) {
+    public void setQtdSalas(Long value) {
         this.qtdSalas = value;
     }
 
