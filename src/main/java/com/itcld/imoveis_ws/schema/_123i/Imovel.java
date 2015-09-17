@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.7 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2015.09.09 às 04:35:18 PM BRT 
+// Gerado em: 2015.09.17 às 03:18:33 PM BRT 
 //
 
 
@@ -15,6 +15,7 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import org.w3._2001.xmlschema.Adapter2;
+import org.w3._2001.xmlschema.Adapter3;
 
 
 /**
@@ -45,7 +46,7 @@ import org.w3._2001.xmlschema.Adapter2;
  *         &lt;element name="QtdSuites" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="QtdSalas" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="QtdBanheiros" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="QtdUnidadesAndar" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="QtdUnidadesAndar" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="AnoConstrucao" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="QtdVagas" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="QtdAndar" type="{http://www.w3.org/2001/XMLSchema}long"/>
@@ -124,14 +125,22 @@ public class Imovel {
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
     protected Long cep;
-    @XmlElement(name = "PrecoVenda")
-    protected double precoVenda;
-    @XmlElement(name = "PrecoLocacao")
-    protected double precoLocacao;
-    @XmlElement(name = "PrecoCondominio")
-    protected double precoCondominio;
-    @XmlElement(name = "IptuAnual")
-    protected double iptuAnual;
+    @XmlElement(name = "PrecoVenda", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter3 .class)
+    @XmlSchemaType(name = "double")
+    protected Double precoVenda;
+    @XmlElement(name = "PrecoLocacao", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter3 .class)
+    @XmlSchemaType(name = "double")
+    protected Double precoLocacao;
+    @XmlElement(name = "PrecoCondominio", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter3 .class)
+    @XmlSchemaType(name = "double")
+    protected Double precoCondominio;
+    @XmlElement(name = "IptuAnual", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter3 .class)
+    @XmlSchemaType(name = "double")
+    protected Double iptuAnual;
     @XmlElement(name = "QtdDormitorios", required = true, type = String.class)
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
@@ -148,8 +157,10 @@ public class Imovel {
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
     protected Long qtdBanheiros;
-    @XmlElement(name = "QtdUnidadesAndar", required = true)
-    protected String qtdUnidadesAndar;
+    @XmlElement(name = "QtdUnidadesAndar", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter2 .class)
+    @XmlSchemaType(name = "long")
+    protected Long qtdUnidadesAndar;
     @XmlElement(name = "AnoConstrucao", required = true, type = String.class)
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
@@ -166,10 +177,14 @@ public class Imovel {
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
     protected Long qtdElevador;
-    @XmlElement(name = "AreaUtil")
-    protected double areaUtil;
-    @XmlElement(name = "AreaTotal")
-    protected double areaTotal;
+    @XmlElement(name = "AreaUtil", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter3 .class)
+    @XmlSchemaType(name = "double")
+    protected Double areaUtil;
+    @XmlElement(name = "AreaTotal", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter3 .class)
+    @XmlSchemaType(name = "double")
+    protected Double areaTotal;
     @XmlElement(name = "TituloImovel", required = true)
     protected String tituloImovel;
     @XmlElement(name = "Observacao", required = true)
@@ -424,64 +439,96 @@ public class Imovel {
     /**
      * Obtém o valor da propriedade precoVenda.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public double getPrecoVenda() {
+    public Double getPrecoVenda() {
         return precoVenda;
     }
 
     /**
      * Define o valor da propriedade precoVenda.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setPrecoVenda(double value) {
+    public void setPrecoVenda(Double value) {
         this.precoVenda = value;
     }
 
     /**
      * Obtém o valor da propriedade precoLocacao.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public double getPrecoLocacao() {
+    public Double getPrecoLocacao() {
         return precoLocacao;
     }
 
     /**
      * Define o valor da propriedade precoLocacao.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setPrecoLocacao(double value) {
+    public void setPrecoLocacao(Double value) {
         this.precoLocacao = value;
     }
 
     /**
      * Obtém o valor da propriedade precoCondominio.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public double getPrecoCondominio() {
+    public Double getPrecoCondominio() {
         return precoCondominio;
     }
 
     /**
      * Define o valor da propriedade precoCondominio.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setPrecoCondominio(double value) {
+    public void setPrecoCondominio(Double value) {
         this.precoCondominio = value;
     }
 
     /**
      * Obtém o valor da propriedade iptuAnual.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public double getIptuAnual() {
+    public Double getIptuAnual() {
         return iptuAnual;
     }
 
     /**
      * Define o valor da propriedade iptuAnual.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setIptuAnual(double value) {
+    public void setIptuAnual(Double value) {
         this.iptuAnual = value;
     }
 
@@ -589,7 +636,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public String getQtdUnidadesAndar() {
+    public Long getQtdUnidadesAndar() {
         return qtdUnidadesAndar;
     }
 
@@ -601,7 +648,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public void setQtdUnidadesAndar(String value) {
+    public void setQtdUnidadesAndar(Long value) {
         this.qtdUnidadesAndar = value;
     }
 
@@ -704,32 +751,48 @@ public class Imovel {
     /**
      * Obtém o valor da propriedade areaUtil.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public double getAreaUtil() {
+    public Double getAreaUtil() {
         return areaUtil;
     }
 
     /**
      * Define o valor da propriedade areaUtil.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setAreaUtil(double value) {
+    public void setAreaUtil(Double value) {
         this.areaUtil = value;
     }
 
     /**
      * Obtém o valor da propriedade areaTotal.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public double getAreaTotal() {
+    public Double getAreaTotal() {
         return areaTotal;
     }
 
     /**
      * Define o valor da propriedade areaTotal.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setAreaTotal(double value) {
+    public void setAreaTotal(Double value) {
         this.areaTotal = value;
     }
 

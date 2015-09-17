@@ -6,7 +6,7 @@
 //
 
 
-package com.itcld.imoveis_ws.schema._123i;
+package com.itcld.imoveis_ws.schema.bossanova;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

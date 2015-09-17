@@ -5,5 +5,5 @@
 // Gerado em: 2015.09.17 às 03:18:33 PM BRT 
 //
 
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://itcld.com/imoveis-ws/schema/country", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
-package com.itcld.imoveis_ws.schema.country;
+@javax.xml.bind.annotation.XmlSchema(namespace = "http://itcld.com/imoveis-ws/schema/bossanova", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
+package com.itcld.imoveis_ws.schema.bossanova;

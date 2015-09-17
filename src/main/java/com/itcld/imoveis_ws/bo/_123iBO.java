@@ -17,6 +17,7 @@ public class _123iBO {
 				defineSegmentoImovel(imovel);
 				validaMarina(imovel);
 				validaSauna(imovel);
+				validaAndarInteiro(imovel);
 				validaArmario(imovel);
 				validaFrenteMar(imovel);
 				validaCarpete(imovel);
@@ -33,40 +34,73 @@ public class _123iBO {
 		imovel.setTipoImovel(seg.tipo);
 		imovel.setSubTipoImovel(seg.subtipo);
 		imovel.setCategoriaImovel(seg.categoria);
-		
 	}
 
 	private void validaMarina(Imovel imovel) {
-		if(AppUtils.checkOrConditions(imovel.getUnidade().getMarinaVagaMolhada(), imovel.getUnidade().getMarinaVagaSeca())){
+		if(AppUtils.checkLongOrConditions(imovel.getUnidade().getMarinaVagaMolhada(), imovel.getUnidade().getMarinaVagaSeca())){
 			imovel.getUnidade().setMarina(1L);
 		}
 		
-		if(AppUtils.checkOrConditions(imovel.getCondominio().getMarinaVagaMolhada(), imovel.getCondominio().getMarinaVagaSeca())){
+		if(AppUtils.checkLongOrConditions(imovel.getCondominio().getMarinaVagaMolhada(), imovel.getCondominio().getMarinaVagaSeca())){
 			imovel.getCondominio().setMarina(1L);
 		}
-			
 	}
 	
-	private void validaPisoLaminado(Imovel imovel) {
+	private void validaSauna(Imovel imovel) {
+		if(AppUtils.checkLongOrConditions(imovel.getUnidade().getSaunaSeca(), imovel.getUnidade().getSaunaUmida())){
+			imovel.getUnidade().setSauna(1L);
+		}
+		
+		if(AppUtils.checkLongOrConditions(imovel.getCondominio().getSaunaSeca(), imovel.getCondominio().getSaunaSeca())){
+			imovel.getCondominio().setSauna(1L);
+		}
 	}
-
-	private void validaPisoFrio(Imovel imovel) {
+	
+	private void validaAndarInteiro(Imovel imovel) {
+		if(imovel.getQtdUnidadesAndar() != null && imovel.getQtdAndar() == 1){
+			imovel.getUnidade().setAndarInteiro(1L);
+		}
 	}
-
-	private void validaPisoMadeira(Imovel imovel) {
+	
+	private void validaArmario(Imovel imovel) {
+		boolean uCk;
+		uCk = AppUtils.checkLongOrConditions(
+				imovel.getUnidade().getArmarioAreaServico(), 
+				imovel.getUnidade().getArmarioCozinha(),
+				imovel.getUnidade().getArmarioEmpregada(),
+				imovel.getUnidade().getArmarioSala(),
+				imovel.getUnidade().getArmarioBanheiro(),
+				imovel.getUnidade().getArmarioCorredor(),
+				imovel.getUnidade().getArmarioEscritorio(),
+				imovel.getUnidade().getArmarioHomeTheater(),
+				imovel.getUnidade().getArmarioDormitorios()
+				);
+				
+		if(uCk){
+			imovel.getUnidade().setArmarioEmbutido(1L);
+		}
 	}
-
-	private void validaCarpete(Imovel imovel) {
-	}
+	
 
 	private void validaFrenteMar(Imovel imovel) {
+		if(imovel.getUnidade().getVista() != null && imovel.getUnidade().getVista().toLowerCase().equals(AppUtils.VISTA_PARA)){
+			imovel.getUnidade().setFrenteMar(1L);
+		}
+	}
+	
+	private void validaCarpete(Imovel imovel) {
+		
+	}
+	
+	private void validaPisoMadeira(Imovel imovel) {
+		
+	}
+	
+	private void validaPisoFrio(Imovel imovel) {
 		
 	}
 
-	private void validaArmario(Imovel imovel) {
+	private void validaPisoLaminado(Imovel imovel) {
+		
 	}
-
-	private void validaSauna(Imovel imovel) {
-	}
-	
 }

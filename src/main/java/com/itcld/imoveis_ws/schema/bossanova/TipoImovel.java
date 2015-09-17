@@ -2,11 +2,11 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.7 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2015.09.17 às 03:18:33 PM BRT 
+// Gerado em: 2015.09.17 às 09:57:04 AM BRT 
 //
 
 
-package com.itcld.imoveis_ws.schema._123i;
+package com.itcld.imoveis_ws.schema.bossanova;
 
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlEnumValue;

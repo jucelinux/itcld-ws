@@ -8,5 +8,6 @@
                 parseMethod="javax.xml.bind.DatatypeConverter.parseDateTime"
                 printMethod="javax.xml.bind.DatatypeConverter.printDateTime" />
  		<jaxb:javaType name="java.lang.Long" xmlType="xs:long"/>
+ 		<jaxb:javaType name="java.lang.Double" xmlType="xs:double"/>
     </jaxb:globalBindings>
 </jaxb:bindings>

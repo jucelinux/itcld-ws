@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.7 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2015.09.09 às 04:35:18 PM BRT 
+// Gerado em: 2015.09.17 às 03:18:33 PM BRT 
 //
 
 
@@ -15,6 +15,7 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import org.w3._2001.xmlschema.Adapter2;
+import org.w3._2001.xmlschema.Adapter3;
 
 
 /**
@@ -942,8 +943,10 @@ public class Unidade {
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
     protected Long quintal;
-    @XmlElement(name = "Recuo")
-    protected double recuo;
+    @XmlElement(name = "Recuo", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter3 .class)
+    @XmlSchemaType(name = "double")
+    protected Double recuo;
     @XmlElement(name = "Redario", required = true, type = String.class)
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
@@ -4456,16 +4459,24 @@ public class Unidade {
     /**
      * Obtém o valor da propriedade recuo.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public double getRecuo() {
+    public Double getRecuo() {
         return recuo;
     }
 
     /**
      * Define o valor da propriedade recuo.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setRecuo(double value) {
+    public void setRecuo(Double value) {
         this.recuo = value;
     }
 

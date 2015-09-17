@@ -6,7 +6,7 @@
 //
 
 
-package com.itcld.imoveis_ws.schema._123i;
+package com.itcld.imoveis_ws.schema.bossanova;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Foto" type="{http://itcld.com/imoveis-ws/schema/123i}Foto" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="Foto" type="{http://itcld.com/imoveis-ws/schema/bossanova}Foto" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>

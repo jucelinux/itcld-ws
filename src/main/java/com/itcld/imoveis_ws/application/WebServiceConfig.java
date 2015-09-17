@@ -41,7 +41,7 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 	@Bean(name = "123i")
 	public DefaultWsdl11Definition _123iWsdlDefinition(XsdSchema _123iSchema) {
 		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
-		wsdl11Definition.setPortTypeName("CountriesPort");
+		wsdl11Definition.setPortTypeName("123iPort");
 		wsdl11Definition.setLocationUri("/ws");
 		wsdl11Definition.setTargetNamespace("http://itcld.com/imoveis-ws/schema/123i");
 		wsdl11Definition.setSchema(_123iSchema);
@@ -52,5 +52,21 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 	public XsdSchema _123iSchema() {
 		return new SimpleXsdSchema(new ClassPathResource("/schema/123i.xsd"));
 	}
+	
+	@Bean(name = "bossanova")
+	public DefaultWsdl11Definition BossaNovaDefinition(XsdSchema BossaNovaSchema) {
+		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
+		wsdl11Definition.setPortTypeName("BossaNovaPort");
+		wsdl11Definition.setLocationUri("/ws");
+		wsdl11Definition.setTargetNamespace("http://itcld.com/imoveis-ws/schema/bossanova");
+		wsdl11Definition.setSchema(BossaNovaSchema);
+		return wsdl11Definition;
+	}
+	
+	@Bean
+	public XsdSchema BossaNovaSchema() {
+		return new SimpleXsdSchema(new ClassPathResource("/schema/bossa_nova.xsd"));
+	}
+	
 	
 }

@@ -6,7 +6,7 @@
 //
 
 
-package com.itcld.imoveis_ws.schema._123i;
+package com.itcld.imoveis_ws.schema.bossanova;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +31,7 @@ import javax.xml.bind.annotation.XmlType;
  *             &lt;complexContent>
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                 &lt;sequence>
- *                   &lt;element name="Imovel" type="{http://itcld.com/imoveis-ws/schema/123i}Imovel" maxOccurs="unbounded"/>
+ *                   &lt;element name="Imovel" type="{http://itcld.com/imoveis-ws/schema/bossanova}Imovel" maxOccurs="unbounded"/>
  *                 &lt;/sequence>
  *               &lt;/restriction>
  *             &lt;/complexContent>
@@ -94,7 +94,7 @@ public class Carga {
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;sequence>
-     *         &lt;element name="Imovel" type="{http://itcld.com/imoveis-ws/schema/123i}Imovel" maxOccurs="unbounded"/>
+     *         &lt;element name="Imovel" type="{http://itcld.com/imoveis-ws/schema/bossanova}Imovel" maxOccurs="unbounded"/>
      *       &lt;/sequence>
      *     &lt;/restriction>
      *   &lt;/complexContent>

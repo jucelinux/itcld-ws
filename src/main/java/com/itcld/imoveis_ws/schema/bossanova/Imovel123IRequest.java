@@ -6,7 +6,7 @@
 //
 
 
-package com.itcld.imoveis_ws.schema._123i;
+package com.itcld.imoveis_ws.schema.bossanova;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Carga" type="{http://itcld.com/imoveis-ws/schema/123i}Carga"/>
+ *         &lt;element name="Carga" type="{http://itcld.com/imoveis-ws/schema/bossanova}Carga"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>

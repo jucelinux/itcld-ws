@@ -6,27 +6,28 @@
 //
 
 
-package com.itcld.imoveis_ws.schema._123i;
+package com.itcld.imoveis_ws.schema.bossanova;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java de Foto complex type.
+ * <p>Classe Java de anonymous complex type.
  * 
  * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
  * 
  * <pre>
- * &lt;complexType name="Foto">
+ * &lt;complexType>
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="NomeArquivo" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="URLArquivo" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="Principal" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="StatusCod" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="Status" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="UrlArquivo" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,42 +37,59 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Foto", propOrder = {
-    "nomeArquivo",
-    "urlArquivo",
-    "principal"
+@XmlType(name = "", propOrder = {
+    "statusCod",
+    "status",
+    "urlArquivo"
 })
-public class Foto {
+@XmlRootElement(name = "imovel123iResponse")
+public class Imovel123IResponse {
 
-    @XmlElement(name = "NomeArquivo", required = true)
-    protected String nomeArquivo;
-    @XmlElement(name = "URLArquivo", required = true)
+    @XmlElement(name = "StatusCod")
+    protected int statusCod;
+    @XmlElement(name = "Status", required = true)
+    protected String status;
+    @XmlElement(name = "UrlArquivo", required = true)
     protected String urlArquivo;
-    @XmlElement(name = "Principal")
-    protected int principal;
 
     /**
-     * Obtém o valor da propriedade nomeArquivo.
+     * Obtém o valor da propriedade statusCod.
+     * 
+     */
+    public int getStatusCod() {
+        return statusCod;
+    }
+
+    /**
+     * Define o valor da propriedade statusCod.
+     * 
+     */
+    public void setStatusCod(int value) {
+        this.statusCod = value;
+    }
+
+    /**
+     * Obtém o valor da propriedade status.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getNomeArquivo() {
-        return nomeArquivo;
+    public String getStatus() {
+        return status;
     }
 
     /**
-     * Define o valor da propriedade nomeArquivo.
+     * Define o valor da propriedade status.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setNomeArquivo(String value) {
-        this.nomeArquivo = value;
+    public void setStatus(String value) {
+        this.status = value;
     }
 
     /**
@@ -82,7 +100,7 @@ public class Foto {
      *     {@link String }
      *     
      */
-    public String getURLArquivo() {
+    public String getUrlArquivo() {
         return urlArquivo;
     }
 
@@ -94,24 +112,8 @@ public class Foto {
      *     {@link String }
      *     
      */
-    public void setURLArquivo(String value) {
+    public void setUrlArquivo(String value) {
         this.urlArquivo = value;
-    }
-
-    /**
-     * Obtém o valor da propriedade principal.
-     * 
-     */
-    public int getPrincipal() {
-        return principal;
-    }
-
-    /**
-     * Define o valor da propriedade principal.
-     * 
-     */
-    public void setPrincipal(int value) {
-        this.principal = value;
     }
 
 }

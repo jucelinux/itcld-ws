@@ -10,20 +10,20 @@ package org.w3._2001.xmlschema;
 
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 
-public class Adapter2
-    extends XmlAdapter<String, Long>
+public class Adapter3
+    extends XmlAdapter<String, Double>
 {
 
 
-    public Long unmarshal(String value) {
-        return ((long)javax.xml.bind.DatatypeConverter.parseLong(value));
+    public Double unmarshal(String value) {
+        return ((double)javax.xml.bind.DatatypeConverter.parseDouble(value));
     }
 
-    public String marshal(Long value) {
+    public String marshal(Double value) {
         if (value == null) {
             return null;
         }
-        return (javax.xml.bind.DatatypeConverter.printLong((long)(long)value));
+        return (javax.xml.bind.DatatypeConverter.printDouble((double)(double)value));
     }
 
 }
