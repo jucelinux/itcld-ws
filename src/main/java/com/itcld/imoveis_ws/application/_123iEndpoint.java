@@ -24,6 +24,7 @@ public class _123iEndpoint {
 	public Imovel123IResponse imovel123iRequest(@RequestPayload Imovel123IRequest request) {
 		Imovel123IResponse response = new Imovel123IResponse();
 		parser.marshall(request.getCarga().getClass(), request.getCarga(), QNAME, TipoImobiliaria.I123);
+		
 		return response;
 	}
 	

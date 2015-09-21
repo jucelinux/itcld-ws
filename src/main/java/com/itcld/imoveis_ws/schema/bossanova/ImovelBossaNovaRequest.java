@@ -6,7 +6,7 @@
 //
 
 
-package com.itcld.imoveis_ws.schema.country;
+package com.itcld.imoveis_ws.schema.bossanova;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="country" type="{http://itcld.com/imoveis-ws/schema/country}country"/>
+ *         &lt;element name="Carga" type="{http://itcld.com/imoveis-ws/schema/bossanova}Carga"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,36 +36,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "country"
+    "carga"
 })
-@XmlRootElement(name = "getCountryResponse")
-public class GetCountryResponse {
+@XmlRootElement(name = "imovelBossaNovaRequest")
+public class ImovelBossaNovaRequest {
 
-    @XmlElement(required = true)
-    protected Country country;
+    @XmlElement(name = "Carga", required = true)
+    protected Carga carga;
 
     /**
-     * Obtém o valor da propriedade country.
+     * Obtém o valor da propriedade carga.
      * 
      * @return
      *     possible object is
-     *     {@link Country }
+     *     {@link Carga }
      *     
      */
-    public Country getCountry() {
-        return country;
+    public Carga getCarga() {
+        return carga;
     }
 
     /**
-     * Define o valor da propriedade country.
+     * Define o valor da propriedade carga.
      * 
      * @param value
      *     allowed object is
-     *     {@link Country }
+     *     {@link Carga }
      *     
      */
-    public void setCountry(Country value) {
-        this.country = value;
+    public void setCarga(Carga value) {
+        this.carga = value;
     }
 
 }

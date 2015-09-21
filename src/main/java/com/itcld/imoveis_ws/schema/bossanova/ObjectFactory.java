@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.7 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2015.09.17 às 03:18:33 PM BRT 
+// Gerado em: 2015.09.21 às 11:01:25 AM BRT 
 //
 
 
@@ -286,19 +286,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Imovel123IResponse }
+     * Create an instance of {@link ImovelBossaNovaResponse }
      * 
      */
-    public Imovel123IResponse createImovel123IResponse() {
-        return new Imovel123IResponse();
+    public ImovelBossaNovaResponse createImovelBossaNovaResponse() {
+        return new ImovelBossaNovaResponse();
     }
 
     /**
-     * Create an instance of {@link Imovel123IRequest }
+     * Create an instance of {@link ImovelBossaNovaRequest }
      * 
      */
-    public Imovel123IRequest createImovel123IRequest() {
-        return new Imovel123IRequest();
+    public ImovelBossaNovaRequest createImovelBossaNovaRequest() {
+        return new ImovelBossaNovaRequest();
     }
 
     /**
