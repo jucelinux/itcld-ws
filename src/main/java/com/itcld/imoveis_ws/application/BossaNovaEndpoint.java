@@ -6,8 +6,8 @@ import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
-import com.itcld.imoveis_ws.schema._123i.Imovel123IRequest;
-import com.itcld.imoveis_ws.schema._123i.Imovel123IResponse;
+import com.itcld.imoveis_ws.schema.bossanova.ImovelBossaNovaRequest;
+import com.itcld.imoveis_ws.schema.bossanova.ImovelBossaNovaResponse;
 import com.itcld.imoveis_ws.util.TipoImobiliaria;
 
 @Endpoint
@@ -19,10 +19,10 @@ public class BossaNovaEndpoint {
 	private static final String NAMESPACE_URI = "http://itcld.com/imoveis-ws/schema/bossanova";
 	private static final String QNAME = "Carga";
 	
-	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "imovel123iRequest")
+	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "imovelBossaNovaRequest")
 	@ResponsePayload
-	public Imovel123IResponse imovel123iRequest(@RequestPayload Imovel123IRequest request) {
-		Imovel123IResponse response = new Imovel123IResponse();
+	public ImovelBossaNovaResponse imovelBossaNovaRequest(@RequestPayload ImovelBossaNovaRequest request) {
+		ImovelBossaNovaResponse response = new ImovelBossaNovaResponse();
 		parser.marshall(request.getCarga().getClass(), request.getCarga(), QNAME, TipoImobiliaria.BOSSANOVA);
 		return response;
 	}

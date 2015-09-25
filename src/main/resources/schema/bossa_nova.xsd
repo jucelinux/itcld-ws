@@ -129,9 +129,7 @@
 			<xs:element type="xs:long" name="ServicosEscritorio"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="VestiarioEmpregado"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Vigilancia24h"  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="AcademiaFitness"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Acesso"  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="Administradora"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="AguaEncanada"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="AndarInteiro"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Aquecedor"  minOccurs="1" maxOccurs="1"/>
@@ -141,34 +139,21 @@
 			<xs:element type="xs:long" name="ArCondicionadoEmbutido"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="ArCondicionadoSplit"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="AreaDeServico"  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="AreaVerde"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="ArmarioDeCozinha"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="ArmarioEmbutido"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Banheira"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="BanheiraComChuveiro"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Bar"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Biblioteca"  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="Bicicletario"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="BoaPastagem"  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="Brinquedoteca"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Cachoeira"  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="CampoFutebol"  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="CampoGolfe"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Carpete"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="CarpeteMadeira"  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="CasaBoneca"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="CasaCaseiro"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="CasaFundo"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="CasaSede"  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="Caseiro"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Celeiro"  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="CentralLimpezaGovernanca"  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="CentralTelefonica"  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="CentroEstetica"  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="ChildrenCare"  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="ChurrasqueiraUnidade"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Closet"  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="CoffeeShop"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Conservacao"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Construcao"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Copa"  minOccurs="1" maxOccurs="1"/>
@@ -186,9 +171,6 @@
 			<xs:element type="xs:long" name="EnergiaEletrica"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="EntradaCaminhoes"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Escritorio"  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="EscritorioVirtual"  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="EspacoGourmet"  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="EspacoZen"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="EstradaAsfaltada"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="EstruturaRede"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Fitness"  minOccurs="1" maxOccurs="1"/>
@@ -198,15 +180,11 @@
 			<xs:element type="xs:long" name="Freezer"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="FrenteMar"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Galpao"  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="GarageBand"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="GasEncanado"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Geladeira"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Geminada"  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="Gerador"  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="Heliponto"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Hidromassagem"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="HomeTheater"  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="Horta"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="InternetWireless"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="InternetCompartilhada"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Isolada"  minOccurs="1" maxOccurs="1"/>
