@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.7 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2015.09.23 às 10:03:26 AM BRT 
+// Gerado em: 2015.09.29 às 11:37:57 AM BRT 
 //
 
 
@@ -262,6 +262,7 @@ import org.w3._2001.xmlschema.Adapter3;
  *         &lt;element name="Vestiario" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="Vista" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="WcEmpregados" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="Fotos" type="{http://itcld.com/imoveis-ws/schema/bossanova}Fotos" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -505,7 +506,8 @@ import org.w3._2001.xmlschema.Adapter3;
     "varandaIntegradaCozinha",
     "vestiario",
     "vista",
-    "wcEmpregados"
+    "wcEmpregados",
+    "fotos"
 })
 public class Imovel {
 
@@ -1395,6 +1397,8 @@ public class Imovel {
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
     protected Long wcEmpregados;
+    @XmlElement(name = "Fotos")
+    protected Fotos fotos;
 
     /**
      * Obtém o valor da propriedade codigoImovel.
@@ -7010,6 +7014,30 @@ public class Imovel {
      */
     public void setWcEmpregados(Long value) {
         this.wcEmpregados = value;
+    }
+
+    /**
+     * Obtém o valor da propriedade fotos.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Fotos }
+     *     
+     */
+    public Fotos getFotos() {
+        return fotos;
+    }
+
+    /**
+     * Define o valor da propriedade fotos.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Fotos }
+     *     
+     */
+    public void setFotos(Fotos value) {
+        this.fotos = value;
     }
 
 }

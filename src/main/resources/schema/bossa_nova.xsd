@@ -268,6 +268,7 @@
 			<xs:element type="xs:long" name="Vestiario"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Vista"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="WcEmpregados"  minOccurs="1" maxOccurs="1"/>
+			<xs:element type="tns:Fotos" name="Fotos" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
 	
