@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.7 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2015.09.29 às 11:37:57 AM BRT 
+// Gerado em: 2015.10.02 às 10:03:41 AM BRT 
 //
 
 
@@ -15,7 +15,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import org.w3._2001.xmlschema.Adapter2;
-import org.w3._2001.xmlschema.Adapter3;
 
 
 /**
@@ -38,10 +37,10 @@ import org.w3._2001.xmlschema.Adapter3;
  *         &lt;element name="Endereco" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="Numero" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="CEP" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="PrecoVenda" type="{http://www.w3.org/2001/XMLSchema}double"/>
- *         &lt;element name="PrecoLocacao" type="{http://www.w3.org/2001/XMLSchema}double"/>
- *         &lt;element name="PrecoCondominio" type="{http://www.w3.org/2001/XMLSchema}double"/>
- *         &lt;element name="IptuAnual" type="{http://www.w3.org/2001/XMLSchema}double"/>
+ *         &lt;element name="PrecoVenda" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="PrecoLocacao" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="PrecoCondominio" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="IptuAnual" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="QtdDormitorios" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="QtdSuites" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="QtdSalas" type="{http://www.w3.org/2001/XMLSchema}long"/>
@@ -51,8 +50,8 @@ import org.w3._2001.xmlschema.Adapter3;
  *         &lt;element name="QtdVagas" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="QtdAndar" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="QtdElevador" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="AreaUtil" type="{http://www.w3.org/2001/XMLSchema}double"/>
- *         &lt;element name="AreaTotal" type="{http://www.w3.org/2001/XMLSchema}double"/>
+ *         &lt;element name="AreaUtil" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="AreaTotal" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="TituloImovel" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="Observacao" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="Fotos" type="{http://itcld.com/imoveis-ws/schema/123i}Fotos" minOccurs="0"/>
@@ -125,22 +124,14 @@ public class Imovel {
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
     protected Long cep;
-    @XmlElement(name = "PrecoVenda", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter3 .class)
-    @XmlSchemaType(name = "double")
-    protected Double precoVenda;
-    @XmlElement(name = "PrecoLocacao", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter3 .class)
-    @XmlSchemaType(name = "double")
-    protected Double precoLocacao;
-    @XmlElement(name = "PrecoCondominio", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter3 .class)
-    @XmlSchemaType(name = "double")
-    protected Double precoCondominio;
-    @XmlElement(name = "IptuAnual", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter3 .class)
-    @XmlSchemaType(name = "double")
-    protected Double iptuAnual;
+    @XmlElement(name = "PrecoVenda", required = true)
+    protected String precoVenda;
+    @XmlElement(name = "PrecoLocacao", required = true)
+    protected String precoLocacao;
+    @XmlElement(name = "PrecoCondominio", required = true)
+    protected String precoCondominio;
+    @XmlElement(name = "IptuAnual", required = true)
+    protected String iptuAnual;
     @XmlElement(name = "QtdDormitorios", required = true, type = String.class)
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
@@ -177,14 +168,10 @@ public class Imovel {
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
     protected Long qtdElevador;
-    @XmlElement(name = "AreaUtil", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter3 .class)
-    @XmlSchemaType(name = "double")
-    protected Double areaUtil;
-    @XmlElement(name = "AreaTotal", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter3 .class)
-    @XmlSchemaType(name = "double")
-    protected Double areaTotal;
+    @XmlElement(name = "AreaUtil", required = true)
+    protected String areaUtil;
+    @XmlElement(name = "AreaTotal", required = true)
+    protected String areaTotal;
     @XmlElement(name = "TituloImovel", required = true)
     protected String tituloImovel;
     @XmlElement(name = "Observacao", required = true)
@@ -444,7 +431,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public Double getPrecoVenda() {
+    public String getPrecoVenda() {
         return precoVenda;
     }
 
@@ -456,7 +443,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public void setPrecoVenda(Double value) {
+    public void setPrecoVenda(String value) {
         this.precoVenda = value;
     }
 
@@ -468,7 +455,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public Double getPrecoLocacao() {
+    public String getPrecoLocacao() {
         return precoLocacao;
     }
 
@@ -480,7 +467,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public void setPrecoLocacao(Double value) {
+    public void setPrecoLocacao(String value) {
         this.precoLocacao = value;
     }
 
@@ -492,7 +479,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public Double getPrecoCondominio() {
+    public String getPrecoCondominio() {
         return precoCondominio;
     }
 
@@ -504,7 +491,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public void setPrecoCondominio(Double value) {
+    public void setPrecoCondominio(String value) {
         this.precoCondominio = value;
     }
 
@@ -516,7 +503,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public Double getIptuAnual() {
+    public String getIptuAnual() {
         return iptuAnual;
     }
 
@@ -528,7 +515,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public void setIptuAnual(Double value) {
+    public void setIptuAnual(String value) {
         this.iptuAnual = value;
     }
 
@@ -756,7 +743,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public Double getAreaUtil() {
+    public String getAreaUtil() {
         return areaUtil;
     }
 
@@ -768,7 +755,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public void setAreaUtil(Double value) {
+    public void setAreaUtil(String value) {
         this.areaUtil = value;
     }
 
@@ -780,7 +767,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public Double getAreaTotal() {
+    public String getAreaTotal() {
         return areaTotal;
     }
 
@@ -792,7 +779,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public void setAreaTotal(Double value) {
+    public void setAreaTotal(String value) {
         this.areaTotal = value;
     }
 

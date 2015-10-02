@@ -57,10 +57,10 @@
 			<xs:element type="xs:string" name="Endereco"/>
 			<xs:element type="xs:long" name="Numero"/>
 			<xs:element type="xs:long"   name="CEP" minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:double" name="PrecoVenda" minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:double" name="PrecoLocacao" minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:double" name="PrecoCondominio" minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:double" name="IptuAnual"/>
+			<xs:element type="xs:string" name="PrecoVenda" minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:string" name="PrecoLocacao" minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:string" name="PrecoCondominio" minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:string" name="IptuAnual"/>
 			<xs:element type="xs:long"   name="QtdDormitorios" minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long"   name="QtdSuites" minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="QtdSalas" minOccurs="1" maxOccurs="1"/>
@@ -70,8 +70,8 @@
 			<xs:element type="xs:long"   name="QtdVagas" minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long"   name="QtdAndar" minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long"   name="QtdElevador" minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:double"  name="AreaUtil" minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:double"  name="AreaTotal" minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:string"  name="AreaUtil" minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:string"  name="AreaTotal" minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:string"  name="TituloImovel"/>
 			<xs:element type="xs:string" name="Observacao" minOccurs="1" maxOccurs="1"/>
 			
@@ -323,7 +323,7 @@
 			<xs:element type="xs:long" name="QuadraTenis" />
 			<xs:element type="xs:long" name="QuartoEmpregada" />
 			<xs:element type="xs:long" name="Quintal" />
-			<xs:element type="xs:double" name="Recuo" />
+			<xs:element type="xs:string" name="Recuo" />
 			<xs:element type="xs:long" name="Redario" />
 			<xs:element type="xs:long" name="RedeAltaTensao" />
 			<xs:element type="xs:long" name="RedeTelefonica" />

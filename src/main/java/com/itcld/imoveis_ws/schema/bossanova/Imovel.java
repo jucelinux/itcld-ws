@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.7 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2015.09.29 às 11:37:57 AM BRT 
+// Gerado em: 2015.10.02 às 10:03:41 AM BRT 
 //
 
 
@@ -15,7 +15,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import org.w3._2001.xmlschema.Adapter2;
-import org.w3._2001.xmlschema.Adapter3;
 
 
 /**
@@ -49,14 +48,14 @@ import org.w3._2001.xmlschema.Adapter3;
  *         &lt;element name="TipoOferta" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="Status" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="Fase" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="PrecoVenda" type="{http://www.w3.org/2001/XMLSchema}double"/>
- *         &lt;element name="PrecoVendaMinimo" type="{http://www.w3.org/2001/XMLSchema}double"/>
- *         &lt;element name="PrecoVendaMaximo" type="{http://www.w3.org/2001/XMLSchema}double"/>
- *         &lt;element name="PrecoMedioM2Venda" type="{http://www.w3.org/2001/XMLSchema}double"/>
- *         &lt;element name="PrecoLocacao" type="{http://www.w3.org/2001/XMLSchema}double"/>
- *         &lt;element name="PrecoMedioM2Locacao" type="{http://www.w3.org/2001/XMLSchema}double"/>
- *         &lt;element name="PrecoCondominio" type="{http://www.w3.org/2001/XMLSchema}double"/>
- *         &lt;element name="PrecoIptu" type="{http://www.w3.org/2001/XMLSchema}double"/>
+ *         &lt;element name="PrecoVenda" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="PrecoVendaMinimo" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="PrecoVendaMaximo" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="PrecoMedioM2Venda" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="PrecoLocacao" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="PrecoMedioM2Locacao" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="PrecoCondominio" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="PrecoIptu" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="QtdDormitorios" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="QtdDormitoriosMinimo" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="QtdDormitoriosMaximo" type="{http://www.w3.org/2001/XMLSchema}long"/>
@@ -71,12 +70,12 @@ import org.w3._2001.xmlschema.Adapter3;
  *         &lt;element name="QtdVagasCobertas" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="QtdAndar" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="QtdElevador" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="AreaUtil" type="{http://www.w3.org/2001/XMLSchema}double"/>
- *         &lt;element name="AreaUtilMinimo" type="{http://www.w3.org/2001/XMLSchema}double"/>
- *         &lt;element name="AreaUtilMaximo" type="{http://www.w3.org/2001/XMLSchema}double"/>
- *         &lt;element name="AreaTotal" type="{http://www.w3.org/2001/XMLSchema}double"/>
- *         &lt;element name="AreaTotalMinimo" type="{http://www.w3.org/2001/XMLSchema}double"/>
- *         &lt;element name="AreaTotalMaximo" type="{http://www.w3.org/2001/XMLSchema}double"/>
+ *         &lt;element name="AreaUtil" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="AreaUtilMinimo" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="AreaUtilMaximo" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="AreaTotal" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="AreaTotalMinimo" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="AreaTotalMaximo" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="TourVirtual" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="UnidadeMetrica" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="NumeroAndar" type="{http://www.w3.org/2001/XMLSchema}long"/>
@@ -555,38 +554,22 @@ public class Imovel {
     protected String status;
     @XmlElement(name = "Fase", required = true)
     protected String fase;
-    @XmlElement(name = "PrecoVenda", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter3 .class)
-    @XmlSchemaType(name = "double")
-    protected Double precoVenda;
-    @XmlElement(name = "PrecoVendaMinimo", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter3 .class)
-    @XmlSchemaType(name = "double")
-    protected Double precoVendaMinimo;
-    @XmlElement(name = "PrecoVendaMaximo", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter3 .class)
-    @XmlSchemaType(name = "double")
-    protected Double precoVendaMaximo;
-    @XmlElement(name = "PrecoMedioM2Venda", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter3 .class)
-    @XmlSchemaType(name = "double")
-    protected Double precoMedioM2Venda;
-    @XmlElement(name = "PrecoLocacao", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter3 .class)
-    @XmlSchemaType(name = "double")
-    protected Double precoLocacao;
-    @XmlElement(name = "PrecoMedioM2Locacao", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter3 .class)
-    @XmlSchemaType(name = "double")
-    protected Double precoMedioM2Locacao;
-    @XmlElement(name = "PrecoCondominio", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter3 .class)
-    @XmlSchemaType(name = "double")
-    protected Double precoCondominio;
-    @XmlElement(name = "PrecoIptu", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter3 .class)
-    @XmlSchemaType(name = "double")
-    protected Double precoIptu;
+    @XmlElement(name = "PrecoVenda", required = true)
+    protected String precoVenda;
+    @XmlElement(name = "PrecoVendaMinimo", required = true)
+    protected String precoVendaMinimo;
+    @XmlElement(name = "PrecoVendaMaximo", required = true)
+    protected String precoVendaMaximo;
+    @XmlElement(name = "PrecoMedioM2Venda", required = true)
+    protected String precoMedioM2Venda;
+    @XmlElement(name = "PrecoLocacao", required = true)
+    protected String precoLocacao;
+    @XmlElement(name = "PrecoMedioM2Locacao", required = true)
+    protected String precoMedioM2Locacao;
+    @XmlElement(name = "PrecoCondominio", required = true)
+    protected String precoCondominio;
+    @XmlElement(name = "PrecoIptu", required = true)
+    protected String precoIptu;
     @XmlElement(name = "QtdDormitorios", required = true, type = String.class)
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
@@ -643,30 +626,18 @@ public class Imovel {
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
     protected Long qtdElevador;
-    @XmlElement(name = "AreaUtil", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter3 .class)
-    @XmlSchemaType(name = "double")
-    protected Double areaUtil;
-    @XmlElement(name = "AreaUtilMinimo", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter3 .class)
-    @XmlSchemaType(name = "double")
-    protected Double areaUtilMinimo;
-    @XmlElement(name = "AreaUtilMaximo", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter3 .class)
-    @XmlSchemaType(name = "double")
-    protected Double areaUtilMaximo;
-    @XmlElement(name = "AreaTotal", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter3 .class)
-    @XmlSchemaType(name = "double")
-    protected Double areaTotal;
-    @XmlElement(name = "AreaTotalMinimo", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter3 .class)
-    @XmlSchemaType(name = "double")
-    protected Double areaTotalMinimo;
-    @XmlElement(name = "AreaTotalMaximo", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter3 .class)
-    @XmlSchemaType(name = "double")
-    protected Double areaTotalMaximo;
+    @XmlElement(name = "AreaUtil", required = true)
+    protected String areaUtil;
+    @XmlElement(name = "AreaUtilMinimo", required = true)
+    protected String areaUtilMinimo;
+    @XmlElement(name = "AreaUtilMaximo", required = true)
+    protected String areaUtilMaximo;
+    @XmlElement(name = "AreaTotal", required = true)
+    protected String areaTotal;
+    @XmlElement(name = "AreaTotalMinimo", required = true)
+    protected String areaTotalMinimo;
+    @XmlElement(name = "AreaTotalMaximo", required = true)
+    protected String areaTotalMaximo;
     @XmlElement(name = "TourVirtual", required = true)
     protected String tourVirtual;
     @XmlElement(name = "UnidadeMetrica", required = true)
@@ -1912,7 +1883,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public Double getPrecoVenda() {
+    public String getPrecoVenda() {
         return precoVenda;
     }
 
@@ -1924,7 +1895,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public void setPrecoVenda(Double value) {
+    public void setPrecoVenda(String value) {
         this.precoVenda = value;
     }
 
@@ -1936,7 +1907,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public Double getPrecoVendaMinimo() {
+    public String getPrecoVendaMinimo() {
         return precoVendaMinimo;
     }
 
@@ -1948,7 +1919,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public void setPrecoVendaMinimo(Double value) {
+    public void setPrecoVendaMinimo(String value) {
         this.precoVendaMinimo = value;
     }
 
@@ -1960,7 +1931,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public Double getPrecoVendaMaximo() {
+    public String getPrecoVendaMaximo() {
         return precoVendaMaximo;
     }
 
@@ -1972,7 +1943,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public void setPrecoVendaMaximo(Double value) {
+    public void setPrecoVendaMaximo(String value) {
         this.precoVendaMaximo = value;
     }
 
@@ -1984,7 +1955,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public Double getPrecoMedioM2Venda() {
+    public String getPrecoMedioM2Venda() {
         return precoMedioM2Venda;
     }
 
@@ -1996,7 +1967,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public void setPrecoMedioM2Venda(Double value) {
+    public void setPrecoMedioM2Venda(String value) {
         this.precoMedioM2Venda = value;
     }
 
@@ -2008,7 +1979,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public Double getPrecoLocacao() {
+    public String getPrecoLocacao() {
         return precoLocacao;
     }
 
@@ -2020,7 +1991,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public void setPrecoLocacao(Double value) {
+    public void setPrecoLocacao(String value) {
         this.precoLocacao = value;
     }
 
@@ -2032,7 +2003,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public Double getPrecoMedioM2Locacao() {
+    public String getPrecoMedioM2Locacao() {
         return precoMedioM2Locacao;
     }
 
@@ -2044,7 +2015,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public void setPrecoMedioM2Locacao(Double value) {
+    public void setPrecoMedioM2Locacao(String value) {
         this.precoMedioM2Locacao = value;
     }
 
@@ -2056,7 +2027,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public Double getPrecoCondominio() {
+    public String getPrecoCondominio() {
         return precoCondominio;
     }
 
@@ -2068,7 +2039,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public void setPrecoCondominio(Double value) {
+    public void setPrecoCondominio(String value) {
         this.precoCondominio = value;
     }
 
@@ -2080,7 +2051,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public Double getPrecoIptu() {
+    public String getPrecoIptu() {
         return precoIptu;
     }
 
@@ -2092,7 +2063,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public void setPrecoIptu(Double value) {
+    public void setPrecoIptu(String value) {
         this.precoIptu = value;
     }
 
@@ -2440,7 +2411,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public Double getAreaUtil() {
+    public String getAreaUtil() {
         return areaUtil;
     }
 
@@ -2452,7 +2423,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public void setAreaUtil(Double value) {
+    public void setAreaUtil(String value) {
         this.areaUtil = value;
     }
 
@@ -2464,7 +2435,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public Double getAreaUtilMinimo() {
+    public String getAreaUtilMinimo() {
         return areaUtilMinimo;
     }
 
@@ -2476,7 +2447,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public void setAreaUtilMinimo(Double value) {
+    public void setAreaUtilMinimo(String value) {
         this.areaUtilMinimo = value;
     }
 
@@ -2488,7 +2459,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public Double getAreaUtilMaximo() {
+    public String getAreaUtilMaximo() {
         return areaUtilMaximo;
     }
 
@@ -2500,7 +2471,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public void setAreaUtilMaximo(Double value) {
+    public void setAreaUtilMaximo(String value) {
         this.areaUtilMaximo = value;
     }
 
@@ -2512,7 +2483,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public Double getAreaTotal() {
+    public String getAreaTotal() {
         return areaTotal;
     }
 
@@ -2524,7 +2495,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public void setAreaTotal(Double value) {
+    public void setAreaTotal(String value) {
         this.areaTotal = value;
     }
 
@@ -2536,7 +2507,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public Double getAreaTotalMinimo() {
+    public String getAreaTotalMinimo() {
         return areaTotalMinimo;
     }
 
@@ -2548,7 +2519,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public void setAreaTotalMinimo(Double value) {
+    public void setAreaTotalMinimo(String value) {
         this.areaTotalMinimo = value;
     }
 
@@ -2560,7 +2531,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public Double getAreaTotalMaximo() {
+    public String getAreaTotalMaximo() {
         return areaTotalMaximo;
     }
 
@@ -2572,7 +2543,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public void setAreaTotalMaximo(Double value) {
+    public void setAreaTotalMaximo(String value) {
         this.areaTotalMaximo = value;
     }
 

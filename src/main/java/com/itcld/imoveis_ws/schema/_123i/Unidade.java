@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.7 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2015.09.29 às 11:37:57 AM BRT 
+// Gerado em: 2015.10.02 às 10:03:41 AM BRT 
 //
 
 
@@ -15,7 +15,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import org.w3._2001.xmlschema.Adapter2;
-import org.w3._2001.xmlschema.Adapter3;
 
 
 /**
@@ -168,7 +167,7 @@ import org.w3._2001.xmlschema.Adapter3;
  *         &lt;element name="QuadraTenis" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="QuartoEmpregada" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="Quintal" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="Recuo" type="{http://www.w3.org/2001/XMLSchema}double"/>
+ *         &lt;element name="Recuo" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="Redario" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="RedeAltaTensao" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="RedeTelefonica" type="{http://www.w3.org/2001/XMLSchema}long"/>
@@ -943,10 +942,8 @@ public class Unidade {
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
     protected Long quintal;
-    @XmlElement(name = "Recuo", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter3 .class)
-    @XmlSchemaType(name = "double")
-    protected Double recuo;
+    @XmlElement(name = "Recuo", required = true)
+    protected String recuo;
     @XmlElement(name = "Redario", required = true, type = String.class)
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
@@ -4464,7 +4461,7 @@ public class Unidade {
      *     {@link String }
      *     
      */
-    public Double getRecuo() {
+    public String getRecuo() {
         return recuo;
     }
 
@@ -4476,7 +4473,7 @@ public class Unidade {
      *     {@link String }
      *     
      */
-    public void setRecuo(Double value) {
+    public void setRecuo(String value) {
         this.recuo = value;
     }
 
