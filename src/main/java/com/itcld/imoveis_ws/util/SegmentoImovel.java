@@ -16,7 +16,8 @@ public enum SegmentoImovel {
 	TERRENO_CONDOMINIO 	 	("terreno em condominio", "loteamento/condominio", ""),
 	TERRENO 				("terreno", "residencial", ""),
 	FAZENDA 				("fazenda", "fazenda", ""),
-	CHACARA 				("chacara", "chacara", "");
+	CHACARA 				("chacara", "chacara", ""),
+	NAO_IDENTIFICADO		("", "", "");
 	
 	public String tipo;
 	public String subtipo;
@@ -61,7 +62,7 @@ public enum SegmentoImovel {
 		}else if(CHACARA.tipo.toLowerCase().equals(tipoImovel.toLowerCase())){
 			return CHACARA;
 		}
-		return null;
+		return NAO_IDENTIFICADO;
 	}
 
 }

@@ -1,5 +1,7 @@
 package com.itcld.imoveis_ws.application;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
@@ -18,6 +20,10 @@ public class BossaNovaEndpoint {
 	
 	private static final String NAMESPACE_URI = "http://itcld.com/imoveis-ws/schema/bossanova";
 	private static final String QNAME = "Carga";
+	
+	@PostConstruct
+	public void init() {
+	}
 	
 	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "imovelBossaNovaRequest")
 	@ResponsePayload

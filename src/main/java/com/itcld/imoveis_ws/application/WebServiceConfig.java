@@ -23,21 +23,6 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 		return new ServletRegistrationBean(servlet, "/ws/*");
 	}
 
-	@Bean(name = "countries")
-	public DefaultWsdl11Definition countriesWsdlDefinition(XsdSchema countriesSchema) {
-		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
-		wsdl11Definition.setPortTypeName("CountriesPort");
-		wsdl11Definition.setLocationUri("/ws");
-		wsdl11Definition.setTargetNamespace("http://itcld.com/imoveis-ws/schema/country");
-		wsdl11Definition.setSchema(countriesSchema);
-		return wsdl11Definition;
-	}
-
-	@Bean
-	public XsdSchema countriesSchema() {
-		return new SimpleXsdSchema(new ClassPathResource("/schema/countries.xsd"));
-	}
-	
 	@Bean(name = "123i")
 	public DefaultWsdl11Definition _123iWsdlDefinition(XsdSchema _123iSchema) {
 		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();

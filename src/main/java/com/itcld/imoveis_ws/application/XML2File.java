@@ -32,9 +32,12 @@ public class XML2File {
 
 	@SuppressWarnings("rawtypes")
 	public void marshall(Class objClass, Object obj, String qName, TipoImobiliaria tipo) {
+		
 		JAXBContext jaxbContext = null;
 		Marshaller marshaller = null;
+		
 		Writer writer = null;
+		Writer writer2 = null;
 
 		try {
 			jaxbContext = JAXBContext.newInstance(objClass);
@@ -47,27 +50,38 @@ public class XML2File {
 		@SuppressWarnings("unchecked")
 		JAXBElement<Object> jaxbElement = new JAXBElement<Object>(new QName(null, qName), objClass, obj);
 
-		writer = criaArquivo(tipo);
+		writer = criaArquivo(tipo, false);
+		writer2 = criaArquivo(tipo, true);
 		try {
 			marshaller.marshal(jaxbElement, writer);
+			marshaller.marshal(jaxbElement, writer2);
 		} catch (JAXBException e) {
 			logger.error("Erro ao fazer parser do arquivo: ", e.getCause());
 			e.printStackTrace();
 		} finally {
 			fechaArquivo(writer);
+			fechaArquivo(writer2);
 		}
 	}
 
-	private FileWriter criaArquivo(TipoImobiliaria tipo) {
-
-		String folder = getFolder(tipo);
+	private FileWriter criaArquivo(TipoImobiliaria tipo, boolean isDefault) {
 
 		Calendar c = Calendar.getInstance();
 		StringBuilder fileName = new StringBuilder();
-		fileName.append(Long.toString(c.getTimeInMillis()));
-		fileName.append(".xml");
-
-		File file = new File(folder,fileName.toString());
+		File file;
+		String folder;
+		
+		if(isDefault){
+			folder = getFolder(TipoImobiliaria.DEFAULT);
+			fileName.append(tipo.name());
+			fileName.append(".xml");
+			file = new File(folder,fileName.toString());
+		}else{
+			folder = getFolder(tipo);
+			fileName.append(Long.toString(c.getTimeInMillis()));
+			fileName.append(".xml");
+			file = new File(folder,fileName.toString());
+		}
 		
 		logger.info("Criando arquivo: " + folder + fileName.toString());
 		
@@ -81,7 +95,7 @@ public class XML2File {
 		}
 
 		try {
-			return new FileWriter(file);
+			return new FileWriter(file,false);
 		} catch (IOException e) {
 			logger.error("Erro ao criar FileWriter ", e.getCause());
 			e.printStackTrace();
@@ -91,7 +105,6 @@ public class XML2File {
 	}
 
 	private String getFolder(TipoImobiliaria tipo) {
-
 		if (tipo.equals(TipoImobiliaria.BOSSANOVA)) {
 			return folderConfig.getDirBossaNova();
 		} else if (tipo.equals(TipoImobiliaria.COUNTRY)) {

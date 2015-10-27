@@ -5,13 +5,12 @@ import static com.itcld.imoveis_ws.util.AppUtils.*;
 import com.itcld.imoveis_ws.schema._123i.Carga.Imoveis;
 import com.itcld.imoveis_ws.schema._123i.Imovel;
 import com.itcld.imoveis_ws.schema._123i.Imovel123IRequest;
-import com.itcld.imoveis_ws.schema._123i.Imovel123IResponse;
 import com.itcld.imoveis_ws.util.AppUtils;
 import com.itcld.imoveis_ws.util.SegmentoImovel;
 
 public class _123iBO {
 
-	public void validaRequest(Imovel123IRequest request,Imovel123IResponse response){
+	public void validaRequest(Imovel123IRequest request){
 		for(Imoveis imoveis : request.getCarga().getImoveis()){
 			for(Imovel imovel : imoveis.getImovel()){
 				defineSegmentoImovel(imovel);

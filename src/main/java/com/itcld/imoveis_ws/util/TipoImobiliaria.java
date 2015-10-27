@@ -6,7 +6,8 @@ public enum TipoImobiliaria {
 	BOSSANOVA(1L,"BossaNova"),
 	IMOVELWEB(2l, "ImovelWeb"),
 	MOVING(3L, "Moving"),
-	COUNTRY(4L,"Country");
+	COUNTRY(4L,"Country"),
+	DEFAULT(5L,"DEFAULT");
 	
 	private Long id;
 	private String value;
