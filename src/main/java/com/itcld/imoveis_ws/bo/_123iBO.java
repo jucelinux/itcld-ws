@@ -36,8 +36,8 @@ public class _123iBO {
 	}
 
 	private void validaMarina(Imovel imovel) {
-		if(checkLongOrConditions(imovel.getUnidade().getMarinaVagaMolhada(), imovel.getUnidade().getMarinaVagaSeca())){
-			imovel.getUnidade().setMarina(1L);
+		if(checkLongOrConditions(imovel.getDetalhes().getMarinaVagaMolhada(), imovel.getDetalhes().getMarinaVagaSeca())){
+			imovel.getDetalhes().setMarina(1L);
 		}
 		
 		if(AppUtils.checkLongOrConditions(imovel.getCondominio().getMarinaVagaMolhada(), imovel.getCondominio().getMarinaVagaSeca())){
@@ -46,8 +46,8 @@ public class _123iBO {
 	}
 	
 	private void validaSauna(Imovel imovel) {
-		if(AppUtils.checkLongOrConditions(imovel.getUnidade().getSaunaSeca(), imovel.getUnidade().getSaunaUmida())){
-			imovel.getUnidade().setSauna(1L);
+		if(AppUtils.checkLongOrConditions(imovel.getDetalhes().getSaunaSeca(), imovel.getDetalhes().getSaunaUmida())){
+			imovel.getDetalhes().setSauna(1L);
 		}
 		
 		if(AppUtils.checkLongOrConditions(imovel.getCondominio().getSaunaSeca(), imovel.getCondominio().getSaunaSeca())){
@@ -57,42 +57,42 @@ public class _123iBO {
 	
 	private void validaAndarInteiro(Imovel imovel) {
 		if(imovel.getQtdUnidadesAndar() != null && imovel.getQtdAndar() == 1){
-			imovel.getUnidade().setAndarInteiro(1L);
+			imovel.getDetalhes().setAndarInteiro(1L);
 		}
 	}
 	
 	private void validaArmario(Imovel imovel) {
 		boolean uCk;
 		uCk = AppUtils.checkLongOrConditions(
-				imovel.getUnidade().getArmarioAreaServico(), 
-				imovel.getUnidade().getArmarioCozinha(),
-				imovel.getUnidade().getArmarioEmpregada(),
-				imovel.getUnidade().getArmarioSala(),
-				imovel.getUnidade().getArmarioBanheiro(),
-				imovel.getUnidade().getArmarioCorredor(),
-				imovel.getUnidade().getArmarioEscritorio(),
-				imovel.getUnidade().getArmarioHomeTheater(),
-				imovel.getUnidade().getArmarioDormitorios()
+				imovel.getDetalhes().getArmarioAreaServico(), 
+				imovel.getDetalhes().getArmarioCozinha(),
+				imovel.getDetalhes().getArmarioEmpregada(),
+				imovel.getDetalhes().getArmarioSala(),
+				imovel.getDetalhes().getArmarioBanheiro(),
+				imovel.getDetalhes().getArmarioCorredor(),
+				imovel.getDetalhes().getArmarioEscritorio(),
+				imovel.getDetalhes().getArmarioHomeTheater(),
+				imovel.getDetalhes().getArmarioDormitorios()
 				);
 				
 		if(uCk){
-			imovel.getUnidade().setArmarioEmbutido(1L);
+			imovel.getDetalhes().setArmarioEmbutido(1L);
 		}
 	}
 	
 
 	private void validaFrenteMar(Imovel imovel) {
-		if(imovel.getUnidade().getVista() != null && imovel.getUnidade().getVista().toLowerCase().equals(AppUtils.VISTA_PARA)){
-			imovel.getUnidade().setFrenteMar(1L);
+		if(imovel.getDetalhes().getVista() != null && imovel.getDetalhes().getVista().toLowerCase().equals(AppUtils.VISTA_PARA)){
+			imovel.getDetalhes().setFrenteMar(1L);
 		}
 	}
 	
 	public static boolean validaCarpete(Imovel i){
-		String areaLazer   = i.getUnidade().getAcabamentoAreaLazer();
-		String cozinha     = i.getUnidade().getAcabamentoCozinha();
-		String living      = i.getUnidade().getAcabamentoLiving();
-		String banheiros   = i.getUnidade().getAcabamentoBanheiros();
-		String dormitorios = i.getUnidade().getAcabamentoDormitorios();
+		String areaLazer   = i.getDetalhes().getAcabamentoAreaLazer();
+		String cozinha     = i.getDetalhes().getAcabamentoCozinha();
+		String living      = i.getDetalhes().getAcabamentoLiving();
+		String banheiros   = i.getDetalhes().getAcabamentoBanheiros();
+		String dormitorios = i.getDetalhes().getAcabamentoDormitorios();
 		
 		boolean check = false;
 		
@@ -106,11 +106,11 @@ public class _123iBO {
 	}
 	
 	public static boolean validaPisoMadeira(Imovel i){
-		String areaLazer   = i.getUnidade().getAcabamentoAreaLazer();
-		String cozinha     = i.getUnidade().getAcabamentoCozinha();
-		String living      = i.getUnidade().getAcabamentoLiving();
-		String banheiros   = i.getUnidade().getAcabamentoBanheiros();
-		String dormitorios = i.getUnidade().getAcabamentoDormitorios();
+		String areaLazer   = i.getDetalhes().getAcabamentoAreaLazer();
+		String cozinha     = i.getDetalhes().getAcabamentoCozinha();
+		String living      = i.getDetalhes().getAcabamentoLiving();
+		String banheiros   = i.getDetalhes().getAcabamentoBanheiros();
+		String dormitorios = i.getDetalhes().getAcabamentoDormitorios();
 		
 		boolean check = false;
 		
@@ -124,11 +124,11 @@ public class _123iBO {
 	}
 	
 	public static boolean validaPisoFrio(Imovel i){
-		String areaLazer   = i.getUnidade().getAcabamentoAreaLazer();
-		String cozinha     = i.getUnidade().getAcabamentoCozinha();
-		String living      = i.getUnidade().getAcabamentoLiving();
-		String banheiros   = i.getUnidade().getAcabamentoBanheiros();
-		String dormitorios = i.getUnidade().getAcabamentoDormitorios();
+		String areaLazer   = i.getDetalhes().getAcabamentoAreaLazer();
+		String cozinha     = i.getDetalhes().getAcabamentoCozinha();
+		String living      = i.getDetalhes().getAcabamentoLiving();
+		String banheiros   = i.getDetalhes().getAcabamentoBanheiros();
+		String dormitorios = i.getDetalhes().getAcabamentoDormitorios();
 		
 		boolean check = false;
 		
@@ -142,11 +142,11 @@ public class _123iBO {
 	}
 	
 	public static boolean validaPisoLaminado(Imovel i){
-		String areaLazer   = i.getUnidade().getAcabamentoAreaLazer();
-		String cozinha     = i.getUnidade().getAcabamentoCozinha();
-		String living      = i.getUnidade().getAcabamentoLiving();
-		String banheiros   = i.getUnidade().getAcabamentoBanheiros();
-		String dormitorios = i.getUnidade().getAcabamentoDormitorios();
+		String areaLazer   = i.getDetalhes().getAcabamentoAreaLazer();
+		String cozinha     = i.getDetalhes().getAcabamentoCozinha();
+		String living      = i.getDetalhes().getAcabamentoLiving();
+		String banheiros   = i.getDetalhes().getAcabamentoBanheiros();
+		String dormitorios = i.getDetalhes().getAcabamentoDormitorios();
 		
 		boolean check = false;
 		

@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import javax.xml.bind.JAXBContext;
@@ -49,7 +50,6 @@ public class XML2File {
 		}
 		@SuppressWarnings("unchecked")
 		JAXBElement<Object> jaxbElement = new JAXBElement<Object>(new QName(null, qName), objClass, obj);
-
 		writer = criaArquivo(tipo, false);
 		writer2 = criaArquivo(tipo, true);
 		try {
@@ -67,6 +67,7 @@ public class XML2File {
 	private FileWriter criaArquivo(TipoImobiliaria tipo, boolean isDefault) {
 
 		Calendar c = Calendar.getInstance();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd-hh-mm-ss.SSS");
 		StringBuilder fileName = new StringBuilder();
 		File file;
 		String folder;
@@ -78,7 +79,7 @@ public class XML2File {
 			file = new File(folder,fileName.toString());
 		}else{
 			folder = getFolder(tipo);
-			fileName.append(Long.toString(c.getTimeInMillis()));
+			fileName.append(sdf.format(c.getTime()));
 			fileName.append(".xml");
 			file = new File(folder,fileName.toString());
 		}

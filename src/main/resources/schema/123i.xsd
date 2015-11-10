@@ -77,7 +77,7 @@
 			
 			<xs:element type="tns:Fotos" name="Fotos" minOccurs="0" maxOccurs="1"/>
 			<xs:element type="tns:Condominio" name="Condominio" minOccurs="0" maxOccurs="1"/>
-			<xs:element type="tns:Unidade" name="Unidade" minOccurs="0" maxOccurs="1"/>
+			<xs:element type="tns:Detalhes" name="Detalhes" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
 	
@@ -181,7 +181,7 @@
 			</xs:sequence>
 	</xs:complexType>
 	
-	<xs:complexType  name="Unidade">
+	<xs:complexType  name="Detalhes">
 		<xs:sequence>
 			<xs:element type="xs:long" name="AcademiaFitness" />
 			<xs:element type="xs:string" name="AcabamentoAreaLazer" />

@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.7 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2015.10.19 às 06:14:37 PM BRST 
+// Gerado em: 2015.10.27 às 02:28:05 PM BRST 
 //
 
 
@@ -69,14 +69,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Unidade }
-     * 
-     */
-    public Unidade createUnidade() {
-        return new Unidade();
-    }
-
-    /**
      * Create an instance of {@link Imovel }
      * 
      */
@@ -90,6 +82,14 @@ public class ObjectFactory {
      */
     public Foto createFoto() {
         return new Foto();
+    }
+
+    /**
+     * Create an instance of {@link Detalhes }
+     * 
+     */
+    public Detalhes createDetalhes() {
+        return new Detalhes();
     }
 
     /**

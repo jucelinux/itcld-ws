@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.7 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2015.10.19 às 06:14:37 PM BRST 
+// Gerado em: 2015.10.27 às 02:28:05 PM BRST 
 //
 
 
@@ -18,12 +18,12 @@ import org.w3._2001.xmlschema.Adapter2;
 
 
 /**
- * <p>Classe Java de Unidade complex type.
+ * <p>Classe Java de Detalhes complex type.
  * 
  * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
  * 
  * <pre>
- * &lt;complexType name="Unidade">
+ * &lt;complexType name="Detalhes">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -215,7 +215,7 @@ import org.w3._2001.xmlschema.Adapter2;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Unidade", propOrder = {
+@XmlType(name = "Detalhes", propOrder = {
     "academiaFitness",
     "acabamentoAreaLazer",
     "acabamentoCozinha",
@@ -396,7 +396,7 @@ import org.w3._2001.xmlschema.Adapter2;
     "vista",
     "wcEmpregados"
 })
-public class Unidade {
+public class Detalhes {
 
     @XmlElement(name = "AcademiaFitness", required = true, type = String.class)
     @XmlJavaTypeAdapter(Adapter2 .class)

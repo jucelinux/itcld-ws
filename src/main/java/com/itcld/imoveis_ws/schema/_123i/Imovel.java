@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.7 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2015.10.19 às 06:14:37 PM BRST 
+// Gerado em: 2015.10.27 às 02:28:05 PM BRST 
 //
 
 
@@ -56,7 +56,7 @@ import org.w3._2001.xmlschema.Adapter2;
  *         &lt;element name="Observacao" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="Fotos" type="{http://itcld.com/imoveis-ws/schema/123i}Fotos" minOccurs="0"/>
  *         &lt;element name="Condominio" type="{http://itcld.com/imoveis-ws/schema/123i}Condominio" minOccurs="0"/>
- *         &lt;element name="Unidade" type="{http://itcld.com/imoveis-ws/schema/123i}Unidade" minOccurs="0"/>
+ *         &lt;element name="Detalhes" type="{http://itcld.com/imoveis-ws/schema/123i}Detalhes" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -96,7 +96,7 @@ import org.w3._2001.xmlschema.Adapter2;
     "observacao",
     "fotos",
     "condominio",
-    "unidade"
+    "detalhes"
 })
 public class Imovel {
 
@@ -180,8 +180,8 @@ public class Imovel {
     protected Fotos fotos;
     @XmlElement(name = "Condominio")
     protected Condominio condominio;
-    @XmlElement(name = "Unidade")
-    protected Unidade unidade;
+    @XmlElement(name = "Detalhes")
+    protected Detalhes detalhes;
 
     /**
      * Obtém o valor da propriedade codigoCliente.
@@ -880,27 +880,27 @@ public class Imovel {
     }
 
     /**
-     * Obtém o valor da propriedade unidade.
+     * Obtém o valor da propriedade detalhes.
      * 
      * @return
      *     possible object is
-     *     {@link Unidade }
+     *     {@link Detalhes }
      *     
      */
-    public Unidade getUnidade() {
-        return unidade;
+    public Detalhes getDetalhes() {
+        return detalhes;
     }
 
     /**
-     * Define o valor da propriedade unidade.
+     * Define o valor da propriedade detalhes.
      * 
      * @param value
      *     allowed object is
-     *     {@link Unidade }
+     *     {@link Detalhes }
      *     
      */
-    public void setUnidade(Unidade value) {
-        this.unidade = value;
+    public void setDetalhes(Detalhes value) {
+        this.detalhes = value;
     }
 
 }
