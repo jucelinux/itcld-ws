@@ -110,7 +110,7 @@ public class XML2File {
 			return folderConfig.getDirBossaNova();
 		} else if (tipo.equals(TipoImobiliaria.COUNTRY)) {
 			return folderConfig.getDirCountry();
-		} else if (tipo.equals(TipoImobiliaria.I123) || tipo.equals(TipoImobiliaria.I123_CAMPO) || tipo.equals(TipoImobiliaria.I123_PRAIA)) {
+		} else if (tipo.equals(TipoImobiliaria.I123)) {
 			return folderConfig.getDir123i();
 		} else if (tipo.equals(TipoImobiliaria.IMOVELWEB)) {
 			return folderConfig.getDirImovelWeb();

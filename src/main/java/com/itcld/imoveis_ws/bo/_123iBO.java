@@ -220,5 +220,4 @@ public class _123iBO {
 	public Carga getCargaCampo() {
 		return cargaCampo;
 	}
-	
-}
+}	
