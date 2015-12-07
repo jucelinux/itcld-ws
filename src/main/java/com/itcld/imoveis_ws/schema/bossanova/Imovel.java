@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.7 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2015.12.06 às 12:18:59 AM BRST 
+// Gerado em: 2015.12.06 às 11:32:09 AM BRST 
 //
 
 
@@ -27,6 +27,9 @@ import org.w3._2001.xmlschema.Adapter2;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
+ *         &lt;element name="PosicaoDestaque" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="PosicaoSuperDestaque " type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="PublicarValorSite " type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="CodigoImovel" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="DataCadastro" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="DataAtualizacao" type="{http://www.w3.org/2001/XMLSchema}string"/>
@@ -84,7 +87,7 @@ import org.w3._2001.xmlschema.Adapter2;
  *         &lt;element name="Chamada" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="AcademiaFitness" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="AcessoDeficiente" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="Administradora" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="Administradora" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="AndaresPredio" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="AreaVerde" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="AutomacaoPredial" type="{http://www.w3.org/2001/XMLSchema}long"/>
@@ -171,16 +174,16 @@ import org.w3._2001.xmlschema.Adapter2;
  *         &lt;element name="FogaoEletrico" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="FornoPizza" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="Freezer" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="FrenteMar" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="FrenteMar" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *         &lt;element name="Galpao" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="GasEncanado" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="Geladeira" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="Geminada" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="Geminada" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *         &lt;element name="Hidromassagem" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="HomeTheater" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="InternetWireless" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="InternetCompartilhada" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="Isolada" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="Isolada" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *         &lt;element name="Jardim" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="Lago" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="LanHouse" type="{http://www.w3.org/2001/XMLSchema}long"/>
@@ -250,7 +253,7 @@ import org.w3._2001.xmlschema.Adapter2;
  *         &lt;element name="TelefoneDDR" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="Telhado" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="TerrasAraveis" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="Topografia" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="Topografia" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *         &lt;element name="TVaCabo" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="VagaDeVisitante" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="Varanda" type="{http://www.w3.org/2001/XMLSchema}long"/>
@@ -272,6 +275,9 @@ import org.w3._2001.xmlschema.Adapter2;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Imovel", propOrder = {
+    "posicaoDestaque",
+    "posicaoSuperDestaque0020",
+    "publicarValorSite0020",
     "codigoImovel",
     "dataCadastro",
     "dataAtualizacao",
@@ -510,6 +516,18 @@ import org.w3._2001.xmlschema.Adapter2;
 })
 public class Imovel {
 
+    @XmlElement(name = "PosicaoDestaque", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter2 .class)
+    @XmlSchemaType(name = "long")
+    protected Long posicaoDestaque;
+    @XmlElement(name = "PosicaoSuperDestaque ", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter2 .class)
+    @XmlSchemaType(name = "long")
+    protected Long posicaoSuperDestaque0020;
+    @XmlElement(name = "PublicarValorSite ", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter2 .class)
+    @XmlSchemaType(name = "long")
+    protected Long publicarValorSite0020;
     @XmlElement(name = "CodigoImovel", required = true)
     protected String codigoImovel;
     @XmlElement(name = "DataCadastro", required = true)
@@ -660,10 +678,8 @@ public class Imovel {
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
     protected Long acessoDeficiente;
-    @XmlElement(name = "Administradora", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter2 .class)
-    @XmlSchemaType(name = "long")
-    protected Long administradora;
+    @XmlElement(name = "Administradora", required = true)
+    protected String administradora;
     @XmlElement(name = "AndaresPredio", required = true, type = String.class)
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
@@ -1008,10 +1024,8 @@ public class Imovel {
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
     protected Long freezer;
-    @XmlElement(name = "FrenteMar", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter2 .class)
-    @XmlSchemaType(name = "long")
-    protected Long frenteMar;
+    @XmlElement(name = "FrenteMar")
+    protected boolean frenteMar;
     @XmlElement(name = "Galpao", required = true, type = String.class)
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
@@ -1024,10 +1038,8 @@ public class Imovel {
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
     protected Long geladeira;
-    @XmlElement(name = "Geminada", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter2 .class)
-    @XmlSchemaType(name = "long")
-    protected Long geminada;
+    @XmlElement(name = "Geminada")
+    protected boolean geminada;
     @XmlElement(name = "Hidromassagem", required = true, type = String.class)
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
@@ -1044,10 +1056,8 @@ public class Imovel {
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
     protected Long internetCompartilhada;
-    @XmlElement(name = "Isolada", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter2 .class)
-    @XmlSchemaType(name = "long")
-    protected Long isolada;
+    @XmlElement(name = "Isolada")
+    protected boolean isolada;
     @XmlElement(name = "Jardim", required = true, type = String.class)
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
@@ -1324,10 +1334,8 @@ public class Imovel {
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
     protected Long terrasAraveis;
-    @XmlElement(name = "Topografia", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter2 .class)
-    @XmlSchemaType(name = "long")
-    protected Long topografia;
+    @XmlElement(name = "Topografia")
+    protected boolean topografia;
     @XmlElement(name = "TVaCabo", required = true, type = String.class)
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
@@ -1370,6 +1378,78 @@ public class Imovel {
     protected Long wcEmpregados;
     @XmlElement(name = "Fotos")
     protected Fotos fotos;
+
+    /**
+     * Obtém o valor da propriedade posicaoDestaque.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public Long getPosicaoDestaque() {
+        return posicaoDestaque;
+    }
+
+    /**
+     * Define o valor da propriedade posicaoDestaque.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setPosicaoDestaque(Long value) {
+        this.posicaoDestaque = value;
+    }
+
+    /**
+     * Obtém o valor da propriedade posicaoSuperDestaque0020.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public Long getPosicaoSuperDestaque_0020() {
+        return posicaoSuperDestaque0020;
+    }
+
+    /**
+     * Define o valor da propriedade posicaoSuperDestaque0020.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setPosicaoSuperDestaque_0020(Long value) {
+        this.posicaoSuperDestaque0020 = value;
+    }
+
+    /**
+     * Obtém o valor da propriedade publicarValorSite0020.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public Long getPublicarValorSite_0020() {
+        return publicarValorSite0020;
+    }
+
+    /**
+     * Define o valor da propriedade publicarValorSite0020.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setPublicarValorSite_0020(Long value) {
+        this.publicarValorSite0020 = value;
+    }
 
     /**
      * Obtém o valor da propriedade codigoImovel.
@@ -2747,7 +2827,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public Long getAdministradora() {
+    public String getAdministradora() {
         return administradora;
     }
 
@@ -2759,7 +2839,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public void setAdministradora(Long value) {
+    public void setAdministradora(String value) {
         this.administradora = value;
     }
 
@@ -4830,24 +4910,16 @@ public class Imovel {
     /**
      * Obtém o valor da propriedade frenteMar.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
      */
-    public Long getFrenteMar() {
+    public boolean isFrenteMar() {
         return frenteMar;
     }
 
     /**
      * Define o valor da propriedade frenteMar.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
      */
-    public void setFrenteMar(Long value) {
+    public void setFrenteMar(boolean value) {
         this.frenteMar = value;
     }
 
@@ -4926,24 +4998,16 @@ public class Imovel {
     /**
      * Obtém o valor da propriedade geminada.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
      */
-    public Long getGeminada() {
+    public boolean isGeminada() {
         return geminada;
     }
 
     /**
      * Define o valor da propriedade geminada.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
      */
-    public void setGeminada(Long value) {
+    public void setGeminada(boolean value) {
         this.geminada = value;
     }
 
@@ -5046,24 +5110,16 @@ public class Imovel {
     /**
      * Obtém o valor da propriedade isolada.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
      */
-    public Long getIsolada() {
+    public boolean isIsolada() {
         return isolada;
     }
 
     /**
      * Define o valor da propriedade isolada.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
      */
-    public void setIsolada(Long value) {
+    public void setIsolada(boolean value) {
         this.isolada = value;
     }
 
@@ -6726,24 +6782,16 @@ public class Imovel {
     /**
      * Obtém o valor da propriedade topografia.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
      */
-    public Long getTopografia() {
+    public boolean isTopografia() {
         return topografia;
     }
 
     /**
      * Define o valor da propriedade topografia.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
      */
-    public void setTopografia(Long value) {
+    public void setTopografia(boolean value) {
         this.topografia = value;
     }
 

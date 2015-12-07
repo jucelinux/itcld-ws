@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+           xmlns:vr="http://www.vivareal.com/schemas/1.0/VRSync"
+           xsi:schemaLocation="http://www.w3.org/2001/XMLSchema http://www.w3.org/2001/XMLSchema.xsd
+                               http://java.sun.com/xml/ns/jaxb http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd"
+           targetNamespace="http://www.vivareal.com/schemas/1.0/VRSync"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           jaxb:version="2.0">
+	
+	<xs:element name="imovelVivaRealResponse">
+		<xs:complexType>
+			<xs:sequence>
+			    <xs:element name="StatusCod" type="xs:int" />
+				<xs:element name="Status"    type="xs:string" />
+				<xs:element name="UrlArquivo"    type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+  
+  	<xs:element name="imovelVivaRealRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element type="vr:listingDataFeed" name="ListingDataFeed" minOccurs="1" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+  <xs:annotation>
+    <xs:appinfo>
+      <jaxb:schemaBindings>
+        <jaxb:package name="com.vivareal.feeds.vrsync"/>
+      </jaxb:schemaBindings>
+    </xs:appinfo>
+  </xs:annotation>
+  
+  <xs:complexType name="listingDataFeed">
+    <xs:annotation>
+      <xs:appinfo>
+        <jaxb:class name="VRSyncFeed"/>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Header" type="vr:header" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Listings" type="vr:listings" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="listings">
+    <xs:sequence>
+      <xs:element name="Listing" type="vr:listing" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:appinfo>
+            <jaxb:property name="listings"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="header">
+    <xs:all>
+      <xs:element name="PublishDate" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Provider" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Email" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Telephone" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ContactName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Logo" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+  
+  <xs:element name="Listing" type="vr:listing"/>
+  <xs:complexType name="listing">
+    <xs:annotation>
+      <xs:appinfo>
+        <jaxb:class name="VRSyncListing"/>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:all>
+      <xs:element name="ListingID" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="AccountID" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ListDate" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="LastUpdateDate" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="TransactionType" type="vr:transactionType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Title" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="DetailViewUrl" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="TrackingCode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="VirtualTourUrl" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Location" type="vr:location" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Details" type="vr:details" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Media" type="vr:media" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ContactInfo" type="vr:contactInfo" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Status" type="vr:status" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Featured" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+  
+  <xs:complexType name="details">
+    <xs:all>
+      <xs:element name="Description" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="ListPrice" type="vr:price" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="RentalPrice" type="vr:periodPrice" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="AvailableDate" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PropertyAdministrationFee" type="vr:periodPrice" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PropertyType" type="vr:propertyType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="ConstructedArea" type="vr:area" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="LotArea" type="vr:area" minOccurs="0" maxOccurs="1" default="0.0"/>
+      <xs:element name="LivingArea" type="vr:area" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="DevelopmentLevel" type="vr:developmentLevel" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="YearBuilt" type="xs:int" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Bedrooms" type="xs:decimal" minOccurs="0" maxOccurs="1" default="0.0"/>
+      <xs:element name="Bathrooms" type="xs:decimal" minOccurs="0" maxOccurs="1" default="0.0"/>
+      <xs:element name="Suites" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Garage" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:int">
+              <xs:attribute name="type" type="vr:garagetype" use="optional" default="Garage"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UnitNumber" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Features" type="vr:features" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Estrato" minOccurs="0" maxOccurs="1">
+        <xs:simpleType>
+          <xs:restriction base="xs:int">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="6"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  
+  <xs:complexType name="location">
+    <xs:all>
+      <xs:element name="Country" type="vr:geoarea" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="State" type="vr:geoarea" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Province" type="vr:geoarea" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="City" type="vr:geoarea" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Zone" type="vr:geoarea" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Neighborhood" type="vr:geoarea" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Address" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attribute name="publiclyVisible" type="xs:boolean" use="optional" default="true"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PostalCode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Latitude" type="xs:decimal" minOccurs="0" maxOccurs="1" default="0.0"/>
+      <xs:element name="Longitude" type="xs:decimal" minOccurs="0" maxOccurs="1" default="0.0"/>
+    </xs:all>
+  </xs:complexType>
+  
+  <xs:complexType name="price">
+    <xs:simpleContent>
+      <xs:extension base="xs:long">
+        <xs:attribute name="currency" type="vr:currency" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <xs:complexType name="periodPrice">
+    <xs:simpleContent>
+      <xs:extension base="xs:long">
+        <xs:attribute name="currency" type="vr:currency" use="required"/>
+        <xs:attribute name="period" type="vr:period" use="optional" default="Monthly"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <xs:complexType name="area">
+    <xs:simpleContent>
+      <xs:extension base="xs:decimal">
+        <xs:attribute name="unit" type="vr:unit" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <xs:complexType name="geoarea">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="abbreviation" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <xs:complexType name="media">
+    <xs:sequence>
+      <xs:element name="Item" type="vr:mediaItem" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:appinfo>
+            <jaxb:property name="items"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="mediaItem">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="medium" type="vr:medium" use="required"/>
+        <xs:attribute name="caption" type="xs:string" use="optional"/>
+        <xs:attribute name="primary" type="xs:boolean" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <xs:complexType name="contactInfo">
+    <xs:all>
+      <xs:element name="Email" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Telephone" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Website" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Photo" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Logo" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="OfficeName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Location" type="vr:location" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+  
+  <xs:complexType name="status">
+    <xs:all>
+      <xs:element name="PropertyStatus" type="vr:propertyStatus" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="StatusDate" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="ClosingPrice" type="vr:price" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+  
+  <xs:complexType name="features">
+    <xs:sequence>
+      <xs:element name="Feature" type="vr:feature" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:appinfo>
+            <jaxb:property name="features"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:simpleType name="propertyStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Available"/>
+      <xs:enumeration value="Pending"/>
+      <xs:enumeration value="In Negotiation"/>
+      <xs:enumeration value="Sold"/>
+      <xs:enumeration value="Rented"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="developmentLevel">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Under Construction"/>
+      <xs:enumeration value="Renovation"/>
+      <xs:enumeration value="Plan Only"/>
+      <xs:enumeration value="Land Only"/>
+      <xs:enumeration value="Built"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="transactionType">
+    <xs:annotation>
+      <xs:appinfo>
+        <jaxb:javaType name="java.lang.String"/>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="For Sale"/>
+      <xs:enumeration value="For Rent"/>
+      <xs:enumeration value="Sale/Rent"/>
+      <xs:enumeration value="Vacation Rentals"/>
+      <xs:enumeration value="Foreclosure"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="propertyType">
+    <xs:annotation>
+      <xs:appinfo>
+        <jaxb:javaType name="java.lang.String"/>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Residential / Sobrado"/>
+      <xs:enumeration value="Residential / Flat"/>
+      <xs:enumeration value="Residential / HABI"/>
+      <xs:enumeration value="Residential / Home"/>
+      <xs:enumeration value="Residential / House"/>
+      <xs:enumeration value="Residential / Two Story House"/>
+      <xs:enumeration value="Residential / Apartment"/>
+      <xs:enumeration value="Residential / Apartment Hotel"/>
+      <xs:enumeration value="Residential / Land/Lot"/>
+      <xs:enumeration value="Residential / Farm/Ranch"/>
+      <xs:enumeration value="Residential / Condo"/>
+      <xs:enumeration value="Commercial / Building"/>
+      <xs:enumeration value="Commercial / Residential Income"/>
+      <xs:enumeration value="Commercial / Office"/>
+      <xs:enumeration value="Commercial / Land/Lot"/>
+      <xs:enumeration value="Commercial / Industrial"/>
+      <xs:enumeration value="Commercial / Retail"/>
+      <xs:enumeration value="Commercial / Agricultural"/>
+      <xs:enumeration value="Vacation / Home"/>
+      <xs:enumeration value="Vacation / Aparment"/>
+      <xs:enumeration value="Vacation / Farm/Ranch"/>
+      <xs:enumeration value="Vacation / Condo"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="feature">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Fully Wired"/>
+      <xs:enumeration value="Generator"/>
+      <xs:enumeration value="RV Parking"/>
+      <xs:enumeration value="BBQ"/>
+      <xs:enumeration value="Bar"/>
+      <xs:enumeration value="Backyard"/>
+      <xs:enumeration value="Alarm System"/>
+      <xs:enumeration value="Gated Community"/>
+      <xs:enumeration value="24 Hour Security"/>
+      <xs:enumeration value="TV Security"/>
+      <xs:enumeration value="Doorman"/>
+      <xs:enumeration value="Fire Alarm"/>
+      <xs:enumeration value="Kitchen"/>
+      <xs:enumeration value="Basement"/>
+      <xs:enumeration value="Living Room"/>
+      <xs:enumeration value="Dining Room"/>
+      <xs:enumeration value="Study"/>
+      <xs:enumeration value="Storage Room"/>
+      <xs:enumeration value="Rooms"/>
+      <xs:enumeration value="Hard Wood Floor"/>
+      <xs:enumeration value="Carpeted Floor"/>
+      <xs:enumeration value="Ceramic Tile"/>
+      <xs:enumeration value="Steam Room"/>
+      <xs:enumeration value="Internet Connection"/>
+      <xs:enumeration value="Satellite Television"/>
+      <xs:enumeration value="Cable Television"/>
+      <xs:enumeration value="Maid's Quarters"/>
+      <xs:enumeration value="Exterior View"/>
+      <xs:enumeration value="Natural Gas"/>
+      <xs:enumeration value="Private Elevator"/>
+      <xs:enumeration value="Elevator"/>
+      <xs:enumeration value="Heating"/>
+      <xs:enumeration value="Air Conditioning"/>
+      <xs:enumeration value="Ceiling Fan"/>
+      <xs:enumeration value="Intercom"/>
+      <xs:enumeration value="Marble/Granite"/>
+      <xs:enumeration value="Parking Places"/>
+      <xs:enumeration value="Parking Garage"/>
+      <xs:enumeration value="Garden"/>
+      <xs:enumeration value="Jacuzzi/Hot Tub"/>
+      <xs:enumeration value="Balcony/Terrace"/>
+      <xs:enumeration value="Pool"/>
+      <xs:enumeration value="Fireplace"/>
+      <xs:enumeration value="Wet Bar"/>
+      <xs:enumeration value="Deck"/>
+      <xs:enumeration value="Lawn"/>
+      <xs:enumeration value="Front Porch"/>
+      <xs:enumeration value="Corner Lot"/>
+      <xs:enumeration value="Landscaping"/>
+      <xs:enumeration value="Lake View"/>
+      <xs:enumeration value="Mountain View"/>
+      <xs:enumeration value="Ocean View"/>
+      <xs:enumeration value="Golf Course"/>
+      <xs:enumeration value="Water View"/>
+      <xs:enumeration value="Estrato"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="currency">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="USD"/>
+      <xs:enumeration value="ARS"/>
+      <xs:enumeration value="AUD"/>
+      <xs:enumeration value="BRL"/>
+      <xs:enumeration value="BZD"/>
+      <xs:enumeration value="CAD"/>
+      <xs:enumeration value="CHF"/>
+      <xs:enumeration value="CLP"/>
+      <xs:enumeration value="COP"/>
+      <xs:enumeration value="CRC"/>
+      <xs:enumeration value="DOP"/>
+      <xs:enumeration value="EUR"/>
+      <xs:enumeration value="GBP"/>
+      <xs:enumeration value="HNL"/>
+      <xs:enumeration value="MXN"/>
+      <xs:enumeration value="NIO"/>
+      <xs:enumeration value="PEN"/>
+      <xs:enumeration value="UYU"/>
+      <xs:enumeration value="VEB"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="period">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Daily"/>
+      <xs:enumeration value="Weekly"/>
+      <xs:enumeration value="Monthly"/>
+      <xs:enumeration value="Quarterly"/>
+      <xs:enumeration value="Yearly"/>
+      <xs:enumeration value="Undefined"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="unit">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="acres"/>
+      <xs:enumeration value="feet"/>
+      <xs:enumeration value="hectares"/>
+      <xs:enumeration value="square kilometers"/>
+      <xs:enumeration value="metres"/>
+      <xs:enumeration value="square feet"/>
+      <xs:enumeration value="square metres"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="garagetype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Parking Space"/>
+      <xs:enumeration value="Garage"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="medium">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="image"/>
+      <xs:enumeration value="video"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

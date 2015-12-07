@@ -6,7 +6,7 @@
 //
 
 
-package com.itcld.imoveis_ws.schema._123i;
+package com.vivareal.feeds.vrsync;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,16 +17,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java de Fotos complex type.
+ * <p>Classe Java de listings complex type.
  * 
  * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
  * 
  * <pre>
- * &lt;complexType name="Fotos">
+ * &lt;complexType name="listings">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Foto" type="{http://itcld.com/imoveis-ws/schema/123i}Foto" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="Listing" type="{http://www.vivareal.com/schemas/1.0/VRSync}listing" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,41 +36,41 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Fotos", propOrder = {
-    "foto"
+@XmlType(name = "listings", propOrder = {
+    "listings"
 })
-public class Fotos {
+public class Listings {
 
-    @XmlElement(name = "Foto")
-    protected List<Foto> foto;
+    @XmlElement(name = "Listing")
+    protected List<VRSyncListing> listings;
 
     /**
-     * Gets the value of the foto property.
+     * Gets the value of the listings property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the foto property.
+     * This is why there is not a <CODE>set</CODE> method for the listings property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getFoto().add(newItem);
+     *    getListings().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Foto }
+     * {@link VRSyncListing }
      * 
      * 
      */
-    public List<Foto> getFoto() {
-        if (foto == null) {
-            foto = new ArrayList<Foto>();
+    public List<VRSyncListing> getListings() {
+        if (listings == null) {
+            listings = new ArrayList<VRSyncListing>();
         }
-        return this.foto;
+        return this.listings;
     }
 
 }

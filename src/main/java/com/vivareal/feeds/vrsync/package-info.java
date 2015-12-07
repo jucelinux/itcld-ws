@@ -5,5 +5,5 @@
 // Gerado em: 2015.12.06 às 11:32:09 AM BRST 
 //
 
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://itcld.com/imoveis-ws/schema/123i", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
-package com.itcld.imoveis_ws.schema._123i;
+@javax.xml.bind.annotation.XmlSchema(namespace = "http://www.vivareal.com/schemas/1.0/VRSync", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
+package com.vivareal.feeds.vrsync;

@@ -6,7 +6,7 @@
 //
 
 
-package com.itcld.imoveis_ws.schema.bossanova;
+package com.vivareal.feeds.vrsync;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -42,8 +42,8 @@ import javax.xml.bind.annotation.XmlType;
     "status",
     "urlArquivo"
 })
-@XmlRootElement(name = "imovelBossaNovaResponse")
-public class ImovelBossaNovaResponse {
+@XmlRootElement(name = "imovelVivaRealResponse")
+public class ImovelVivaRealResponse {
 
     @XmlElement(name = "StatusCod")
     protected int statusCod;

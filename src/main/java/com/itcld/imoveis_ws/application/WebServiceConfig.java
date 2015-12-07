@@ -53,5 +53,20 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 		return new SimpleXsdSchema(new ClassPathResource("/schema/bossa_nova.xsd"));
 	}
 	
+	@Bean(name = "vivareal")
+	public DefaultWsdl11Definition VivaRealDefinition(XsdSchema VivaRealSchema) {
+		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
+		wsdl11Definition.setPortTypeName("VivaRealPort");
+		wsdl11Definition.setLocationUri("/ws");
+		wsdl11Definition.setTargetNamespace("http://www.vivareal.com/schemas/1.0/VRSync");
+		wsdl11Definition.setSchema(VivaRealSchema);
+		return wsdl11Definition;
+	}
+	
+	@Bean
+	public XsdSchema VivaRealSchema() {
+		return new SimpleXsdSchema(new ClassPathResource("/schema/viva_real.xsd"));
+	}
+	
 	
 }

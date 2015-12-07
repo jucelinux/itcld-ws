@@ -6,7 +6,7 @@
 //
 
 
-package com.itcld.imoveis_ws.schema.bossanova;
+package com.vivareal.feeds.vrsync;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Carga" type="{http://itcld.com/imoveis-ws/schema/bossanova}Carga"/>
+ *         &lt;element name="ListingDataFeed" type="{http://www.vivareal.com/schemas/1.0/VRSync}listingDataFeed"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,36 +36,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "carga"
+    "listingDataFeed"
 })
-@XmlRootElement(name = "imovelBossaNovaRequest")
-public class ImovelBossaNovaRequest {
+@XmlRootElement(name = "imovelVivaRealRequest")
+public class ImovelVivaRealRequest {
 
-    @XmlElement(name = "Carga", required = true)
-    protected Carga carga;
+    @XmlElement(name = "ListingDataFeed", required = true)
+    protected VRSyncFeed listingDataFeed;
 
     /**
-     * Obtém o valor da propriedade carga.
+     * Obtém o valor da propriedade listingDataFeed.
      * 
      * @return
      *     possible object is
-     *     {@link Carga }
+     *     {@link VRSyncFeed }
      *     
      */
-    public Carga getCarga() {
-        return carga;
+    public VRSyncFeed getListingDataFeed() {
+        return listingDataFeed;
     }
 
     /**
-     * Define o valor da propriedade carga.
+     * Define o valor da propriedade listingDataFeed.
      * 
      * @param value
      *     allowed object is
-     *     {@link Carga }
+     *     {@link VRSyncFeed }
      *     
      */
-    public void setCarga(Carga value) {
-        this.carga = value;
+    public void setListingDataFeed(VRSyncFeed value) {
+        this.listingDataFeed = value;
     }
 
 }

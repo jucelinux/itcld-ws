@@ -34,6 +34,9 @@
 	
     <xs:complexType name="Imovel">
 		<xs:sequence>
+			<xs:element type="xs:long" name="PosicaoDestaque"  minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:long" name="PosicaoSuperDestaque "  minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:long" name="PublicarValorSite "  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:string" name="CodigoImovel"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:string" name="DataCadastro"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:string" name="DataAtualizacao"  minOccurs="1" maxOccurs="1"/>
@@ -91,7 +94,7 @@
 			<xs:element type="xs:string" name="Chamada"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="AcademiaFitness"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="AcessoDeficiente"  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="Administradora"  minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:string" name="Administradora"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="AndaresPredio"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="AreaVerde"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="AutomacaoPredial"  minOccurs="1" maxOccurs="1"/>
@@ -178,16 +181,16 @@
 			<xs:element type="xs:long" name="FogaoEletrico"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="FornoPizza"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Freezer"  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="FrenteMar"  minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:boolean" name="FrenteMar"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Galpao"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="GasEncanado"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Geladeira"  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="Geminada"  minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:boolean" name="Geminada"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Hidromassagem"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="HomeTheater"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="InternetWireless"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="InternetCompartilhada"  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="Isolada"  minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:boolean" name="Isolada"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Jardim"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Lago"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="LanHouse"  minOccurs="1" maxOccurs="1"/>
@@ -257,7 +260,7 @@
 			<xs:element type="xs:long" name="TelefoneDDR"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Telhado"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="TerrasAraveis"  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="Topografia"  minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:boolean" name="Topografia"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="TVaCabo"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="VagaDeVisitante"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Varanda"  minOccurs="1" maxOccurs="1"/>

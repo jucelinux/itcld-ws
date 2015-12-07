@@ -6,24 +6,24 @@
 //
 
 
-package org.w3._2001.xmlschema;
+package com.vivareal.feeds.vrsync;
 
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 
-public class Adapter3
-    extends XmlAdapter<String, Double>
+public class Adapter2
+    extends XmlAdapter<String, String>
 {
 
 
-    public Double unmarshal(String value) {
-        return ((double)javax.xml.bind.DatatypeConverter.parseDouble(value));
+    public String unmarshal(String value) {
+        return new String(value);
     }
 
-    public String marshal(Double value) {
+    public String marshal(String value) {
         if (value == null) {
             return null;
         }
-        return (javax.xml.bind.DatatypeConverter.printDouble((double)(double)value));
+        return value.toString();
     }
 
 }
