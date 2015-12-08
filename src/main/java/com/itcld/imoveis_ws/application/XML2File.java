@@ -116,6 +116,8 @@ public class XML2File {
 			return folderConfig.getDirImovelWeb();
 		} else if (tipo.equals(TipoImobiliaria.MOVING)) {
 			return folderConfig.getDirMoving();
+		} else if (tipo.equals(TipoImobiliaria.VIVAREAL)) {
+			return folderConfig.getDirVivaReal();
 		}
 
 		return folderConfig.getDirCountry();

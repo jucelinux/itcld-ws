@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.7 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2015.12.06 às 11:32:09 AM BRST 
+// Gerado em: 2015.12.08 às 09:45:38 AM BRST 
 //
 
 
@@ -253,7 +253,7 @@ import org.w3._2001.xmlschema.Adapter2;
  *         &lt;element name="TelefoneDDR" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="Telhado" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="TerrasAraveis" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="Topografia" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="Topografia" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="TVaCabo" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="VagaDeVisitante" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="Varanda" type="{http://www.w3.org/2001/XMLSchema}long"/>
@@ -1334,8 +1334,8 @@ public class Imovel {
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
     protected Long terrasAraveis;
-    @XmlElement(name = "Topografia")
-    protected boolean topografia;
+    @XmlElement(name = "Topografia", required = true)
+    protected String topografia;
     @XmlElement(name = "TVaCabo", required = true, type = String.class)
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
@@ -6782,16 +6782,24 @@ public class Imovel {
     /**
      * Obtém o valor da propriedade topografia.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public boolean isTopografia() {
+    public String getTopografia() {
         return topografia;
     }
 
     /**
      * Define o valor da propriedade topografia.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTopografia(boolean value) {
+    public void setTopografia(String value) {
         this.topografia = value;
     }
 

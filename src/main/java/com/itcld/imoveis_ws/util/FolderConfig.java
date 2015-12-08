@@ -10,6 +10,7 @@ public class FolderConfig {
 	private String dir123i;
 	private String dirImovelWeb;
 	private String dirBossaNova;
+	private String dirVivaReal;
 	private String dirDefault;
 	
 	public String getDirDefault() {
@@ -47,6 +48,12 @@ public class FolderConfig {
 	}
 	public void setDirBossaNova(String dirBossaNova) {
 		this.dirBossaNova = dirBossaNova;
+	}
+	public String getDirVivaReal() {
+		return dirVivaReal;
+	}
+	public void setDirVivaReal(String dirVivaReal) {
+		this.dirVivaReal = dirVivaReal;
 	}
 	    
 }

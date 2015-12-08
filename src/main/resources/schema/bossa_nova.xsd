@@ -260,7 +260,7 @@
 			<xs:element type="xs:long" name="TelefoneDDR"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Telhado"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="TerrasAraveis"  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:boolean" name="Topografia"  minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:string" name="Topografia"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="TVaCabo"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="VagaDeVisitante"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Varanda"  minOccurs="1" maxOccurs="1"/>
