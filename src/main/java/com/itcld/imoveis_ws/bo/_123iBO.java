@@ -25,6 +25,8 @@ public class _123iBO {
 	
 	private Carga cargaPraia;
 	private Carga cargaCampo;
+	private boolean xmlPraia;
+	private boolean xmlCampo;
 
 	public _123iBO(){
 		cargaPraia = new Carga();
@@ -56,10 +58,12 @@ public class _123iBO {
 		boolean ret = false;
 		
 		if(imovel.getLocal().toLowerCase().contains(AppConst.CAMPO)){
+			xmlCampo = true;
 			ret = true;
 			imovelValida.setCodigoCliente(AppConst.COD_CLI);
 			cargaCampo.getImoveis().getImovel().add(imovelValida);
 		}else if(imovel.getLocal().toLowerCase().contains(AppConst.PRAIA)){
+			xmlPraia = true;
 			ret = true;
 			imovelValida.setCodigoCliente(AppConst.COD_CLI);
 			cargaPraia.getImoveis().getImovel().add(imovelValida);
@@ -110,7 +114,7 @@ public class _123iBO {
 	}
 	
 	private void validaAndarInteiro(Imovel imovel) {
-		if(imovel.getQtdUnidadesAndar() != null && imovel.getQtdAndar() == 1){
+		if(imovel.getQtdUnidadesAndar() != null){
 			imovel.getDetalhes().setAndarInteiro(1L);
 		}
 	}
@@ -219,5 +223,21 @@ public class _123iBO {
 
 	public Carga getCargaCampo() {
 		return cargaCampo;
+	}
+
+	public boolean isXmlCampo() {
+		return xmlCampo;
+	}
+
+	public void setXmlCampo(boolean xmlCampo) {
+		this.xmlCampo = xmlCampo;
+	}
+
+	public boolean isXmlPraia() {
+		return xmlPraia;
+	}
+
+	public void setXmlPraia(boolean xmlPraia) {
+		this.xmlPraia = xmlPraia;
 	}
 }	

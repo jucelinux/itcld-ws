@@ -35,6 +35,7 @@ public class _123iEndpoint {
 		Imovel123IResponse response = new Imovel123IResponse();
 		bo.validaRequest(request);
 		parser.marshall(request.getCarga().getClass(), request.getCarga(), QNAME, TipoImobiliaria.I123);
+		
 		parser.marshall(bo.getCargaPraia().getClass(), bo.getCargaPraia(), QNAME, TipoImobiliaria.I123_PRAIA);
 		parser.marshall(bo.getCargaCampo().getClass(), bo.getCargaCampo(), QNAME, TipoImobiliaria.I123_CAMPO);
 		return response;

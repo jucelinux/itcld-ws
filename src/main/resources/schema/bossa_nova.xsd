@@ -92,6 +92,7 @@
 			<xs:element type="xs:string" name="TituloImovel"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:string" name="Observacao"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:string" name="Chamada"  minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:string" name="NomeCondominio"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="AcademiaFitness"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="AcessoDeficiente"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:string" name="Administradora"  minOccurs="1" maxOccurs="1"/>
@@ -142,6 +143,7 @@
 			<xs:element type="xs:long" name="ArCondicionadoEmbutido"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="ArCondicionadoSplit"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="AreaDeServico"  minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:long" name="AreaVerde"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="ArmarioDeCozinha"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="ArmarioEmbutido"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Banheira"  minOccurs="1" maxOccurs="1"/>
@@ -152,6 +154,7 @@
 			<xs:element type="xs:long" name="Cachoeira"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Carpete"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="CarpeteMadeira"  minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:long" name="CasaBoneca"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="CasaCaseiro"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="CasaFundo"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="CasaSede"  minOccurs="1" maxOccurs="1"/>

@@ -81,9 +81,16 @@
 					</execution>
 				</executions>
 				<configuration>
-					<vmArgs>
-				       <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
-				   	</vmArgs>
+					 <properties>
+	                	<property>
+		                    <name>javax.xml.accessExternalSchema</name>
+		                    <value>all</value>
+		                </property>
+		                <property>
+		                    <name>javax.xml.accessExternalDTD</name>
+		                    <value>all</value>
+		                </property>
+		            </properties>
 					<schemaDirectory>${project.basedir}/src/main/resources/schema/</schemaDirectory>
 					<outputDirectory>${project.basedir}/src/main/java</outputDirectory>
 					<clearOutputDir>false</clearOutputDir>

@@ -5,7 +5,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties(prefix="folders")
 public class FolderConfig {
 	
-	private String dirCountry;
 	private String dirMoving;
 	private String dir123i;
 	private String dirImovelWeb;
@@ -18,12 +17,6 @@ public class FolderConfig {
 	}
 	public void setDirDefault(String dirDefault) {
 		this.dirDefault = dirDefault;
-	}
-	public String getDirCountry() {
-		return dirCountry;
-	}
-	public void setDirCountry(String dirCountry) {
-		this.dirCountry = dirCountry;
 	}
 	public String getDirMoving() {
 		return dirMoving;
