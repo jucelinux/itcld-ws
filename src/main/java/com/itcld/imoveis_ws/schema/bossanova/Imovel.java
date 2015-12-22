@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.7 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2015.12.21 às 04:08:27 PM BRST 
+// Gerado em: 2015.12.22 às 02:16:01 PM BRST 
 //
 
 
@@ -28,6 +28,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
+ *         &lt;element name="Condominio" type="{http://itcld.com/imoveis-ws/schema/bossanova}Condominio"/>
  *         &lt;element name="PosicaoDestaque" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="PosicaoSuperDestaque " type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="PublicarValorSite " type="{http://www.w3.org/2001/XMLSchema}long"/>
@@ -97,7 +98,6 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="Brinquedoteca" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="CampoFutebol" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="CampoGolfe" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="CasaBoneca" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="Caseiro" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="CentralLimpezaGovernanca" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="CentralTelefonica" type="{http://www.w3.org/2001/XMLSchema}long"/>
@@ -284,245 +284,246 @@ import javax.xml.bind.annotation.XmlType;
 public class Imovel {
 
     @XmlElementRefs({
-        @XmlElementRef(name = "QuadraEsportes", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "TipoOferta", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "RedeAltaTensao", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Patio", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "QtdDormitoriosMaximo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "QtdVagas", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Pasto", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "SalaoJogos", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Closet", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "QtdVagasCobertas", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "AcessoDeficiente", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "PiscinaAquecida", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "PrecoMedioM2Venda", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "QtdSuites", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Copa", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Galpao", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "TituloImovel", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "PrecoVendaMaximo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "RedeTelefonica", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Gerador", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Ducha", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "QuartoEmpregada", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "CozinhaAmericana", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Despensa", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "VarandaIntegradaCozinha", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Construcao", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "PosicaoDestaque", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "QtdUnidadesAndar", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "PrecoCondominio", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "ArCondicionadoSplit", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "PosicaoSuperDestaque ", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "PisoLaminado", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "NumeroTorres", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "AreaUtil", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Pesqueiro", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Lavanderia", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Bicicletario", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "PisoFrio", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "PisoMadeira", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "SalaAlmoco", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Deposito", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Microondas", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Acesso", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Redario", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "longitude", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "HomeTheater", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "PistaCooper", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "OfficeSpace", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "TelefoneDDR", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Chamada", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "PetPlay", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "NomeCondominio", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Restaurante", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Geladeira", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "SalaTV", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Churrasqueira", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "CozinhaIndependente", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Status", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Caseiro", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Mobiliado", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "GasEncanado", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "PersonalTraining", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "AndarInteiro", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "CasaCaseiro", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "TVaCabo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "QtdVagasMinimo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Banheira", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "DependenciaEmpregados", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Fotos", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Poco", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "EnergiaEletrica", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
         @XmlElementRef(name = "VagaDeVisitante", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Conservacao", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "WcEmpregados", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "PrecoMedioM2Locacao", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "DepositoSubsolo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Bar", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Geminada", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "LavaLouca", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "CampoGolfe", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Brinquedoteca", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "EspacoZen", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "AndaresPredio", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Paiol", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "EscritorioVirtual", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "PisoElevado", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Microondas", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Redario", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Pasto", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
         @XmlElementRef(name = "Sauna", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "QuadraSquash", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "ComplementoEndereco", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Lavabo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "ReservatorioAgua", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Vista", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "ChildrenCare", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "SalaCinema", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "FrenteMar", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "QtdElevador", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "RuasAsfaltadas", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "PistaSkate", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "DataAtualizacao", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "EspacoGourmet", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "QtdSalas", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Administradora", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Vestiario", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "AutomacaoPredial", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "PosicaoDestaque", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "FornoPizza", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "PocoArtesiano", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Biblioteca", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "AreaUtilMinimo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "WcEmpregados", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Numero", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Lareira", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "PianoBar", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Galpao", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "QuadraTenis", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "VestiarioEmpregado", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Vigilancia24h", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Pomar", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Silos", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "DependenciaEmpregados", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "AreaTotal", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "ArmarioDeCozinha", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Carpete", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Horta", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Fitness", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Churrasqueira", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "PrecoCondominio", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Rio", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Status", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "EstruturaRede", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "QtdVagasMinimo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "PrecoIptu", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Solarium", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
         @XmlElementRef(name = "QtdAndar", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "AreaUtilMaximo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Patio", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "AquecimentoCentral", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "VarandaGourmet", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "QtdDormitoriosMinimo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "CarpeteMadeira", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "BanheiraComChuveiro", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "CozinhaIndependente", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "CasaFundo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Playground", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "QuadraEsportes", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Construcao", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "AnoConstrucao", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "QtdSuites", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "ComplementoEndereco", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "LavaLouca", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "SalaGinastica", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "ArCondicionadoSplit", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "QuadraPoliesportiva", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "SalaIntima", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "CozinhaAmericana", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "RedeTelefonica", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "PosicaoSuperDestaque ", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "MiniArvorismo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "SalaReunioes", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "PiscinaClimatizada", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "TelefoneDDR", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "AreaVerde", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "FogaoEletrico", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "PermiteAnimais", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Edicula", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "EstradaAsfaltada", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "SalaTV", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "ArCondicionado", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Gerador", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Cidade", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "TerrasAraveis", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Lavabo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Quintal", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "EspacoGourmet", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "InternetWireless", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "PiscinaInfantil", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "VarandaIntegradaCozinha", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "RuasAsfaltadas", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "PrecoVendaMaximo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Chamada", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "AcademiaFitness", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Massagista", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Cachoeira", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Freezer", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "CasaBoneca", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "LuzEletrica", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "InternetCompartilhada", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Despensa", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "QuadraSquash", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "GasEncanado", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Poco", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "QtdElevador", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Vestiario", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "EntradaCaminhoes", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "SalaCinema", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Fase", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "ChildrenCare", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "QtdVagasMaximo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "CampoGolfe", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Fogao", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "PublicarValorSite ", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "QtdDormitorios", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Celeiro", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "NomeProprietario", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Topografia", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "SalaoConvencoes", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "TipoImovel", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "EmQualAndar", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "SalaoJogos", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "ArCondicionadoCentral", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "TipoOferta", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "ArCondicionadoEmbutido", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "PostoBancario", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Fotos", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "PersonalTraining", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
         @XmlElementRef(name = "CozinhaGourmet", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
         @XmlElementRef(name = "Recuo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "SalaoFestas", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "ArCondicionadoEmbutido", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "MiniArvorismo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "PiscinaInfantil", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Silos", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "SalaoConvencoes", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Guarita", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "AndaresPredio", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "CasaFundo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "ServicosEscritorio", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "SistemaIncendio", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "CentralTelefonica", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "AreaTotal", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "QtdDormitoriosMinimo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "NumeroAndar", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Isolada", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "PianoBar", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "PocoArtesiano", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "AreaTotalMaximo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Lavoura", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Piscina", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Playground", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Cidade", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Freezer", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Mezanino", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Rio", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Escritorio", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Endereco", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "TourVirtual", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Estado", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "ArCondicionadoCentral", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Numero", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "PiscinaClimatizada", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Heliponto", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "PostoBancario", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "FogaoEletrico", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "EmQualAndar", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Fase", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "PrecoLocacao", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "SistemaAlarme", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "PeDireitoAlto", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "TipoImovel", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "AreaTotalMinimo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "CentralLimpezaGovernanca", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Brinquedoteca", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Cachoeira", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "GarageBand", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Vista", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
         @XmlElementRef(name = "BairroComercial", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "CoffeeShop", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "CasaBoneca", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "PrecoIptu", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "BanheiraComChuveiro", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Vigilancia24h", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "CasaSede", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "VarandaGourmet", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "SalaIntima", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "ArCondicionado", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Aquecedor", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "PortariaControlada", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "QuantidadeElevadores", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "PublicarValorSite ", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "VestiarioEmpregado", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Telhado", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "TerrasAraveis", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "DataCadastro", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Observacao", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "FornoPizza", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "AquecimentoCentral", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "NomeProprietario", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "ArmarioDeCozinha", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "AreaUtilMinimo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "UnidadeMetrica", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Edicula", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "QtdBanheiros", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Jardim", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Pomar", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "AcademiaFitness", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "SubTipoImovel", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "CampoFutebol", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "QtdVagasMaximo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "InternetWireless", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "EdificioInteligente", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "LanHouse", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "AguaEncanada", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "BoaPastagem", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Quintal", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Pais", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Estado", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "QtdSalas", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Guarita", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Bar", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "DataAtualizacao", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "QtdVagasCobertas", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Piscina", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
         @XmlElementRef(name = "CEP", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "SalaReunioes", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "EmailProprietario", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "EstruturaRede", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "QuadraPoliesportiva", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "PermiteAnimais", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Marina", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "QtdDormitorios", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "CentroEstetica", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Portaria24h", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Fitness", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "PiscinaCoberta", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "QuadraTenis", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Lavoura", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "BoaPastagem", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
         @XmlElementRef(name = "VarandaFechadaVidro", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Solarium", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Carpete", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "SalaJantar", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "SistemaEsgoto", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "PrecoVenda", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "EscritorioVirtual", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Massagista", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "InternetCompartilhada", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "AutomacaoPredial", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "latitude", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "PisoElevado", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Topografia", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "AreaVerde", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "PrecoVendaMinimo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "AreaUtilMaximo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Heliponto", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Acesso", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "PrecoMedioM2Locacao", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
         @XmlElementRef(name = "Bairro", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Hidromassagem", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "CodigoImovel", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "AnoConstrucao", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "LuzEletrica", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "MeioAndar", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Varanda", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "CarpeteMadeira", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Biblioteca", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "EstradaAsfaltada", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "VarandaChurrasqueira", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "EntradaCaminhoes", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "ArmarioEmbutido", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Fogao", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Curral", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Lago", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "EspacoZen", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Celeiro", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Horta", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Paiol", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "QtdVagas", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "PetPlay", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "EnergiaEletrica", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "latitude", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Lavanderia", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "DataCadastro", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "QtdBanheiros", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
         @XmlElementRef(name = "AreaDeServico", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "SalaGinastica", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Lareira", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "Copa", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "LanHouse", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Endereco", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Observacao", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "HomeTheater", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Administradora", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "EmailProprietario", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Varanda", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "AreaTotalMaximo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "ArmarioEmbutido", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Portaria24h", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "NumeroAndar", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "OfficeSpace", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Banheira", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Caseiro", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Geladeira", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Isolada", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Mobiliado", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "SalaoFestas", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "TituloImovel", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "PiscinaCoberta", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Ducha", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Geminada", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "QtdUnidadesAndar", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "CasaCaseiro", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Condominio", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "VarandaChurrasqueira", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "QuantidadeElevadores", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "ReservatorioAgua", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "NomeCondominio", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "AguaEncanada", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "SalaAlmoco", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Mezanino", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Pesqueiro", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "QuartoEmpregada", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "SistemaAlarme", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "AreaTotalMinimo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "SalaJantar", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "PisoMadeira", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "CoffeeShop", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "GarageBand", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "AndarInteiro", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Marina", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "SubTipoImovel", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "RedeAltaTensao", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Curral", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "PisoFrio", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "PisoLaminado", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Jardim", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "CentralLimpezaGovernanca", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "SistemaEsgoto", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "PistaSkate", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "CasaSede", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "PistaCooper", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "MeioAndar", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "PiscinaAquecida", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "TourVirtual", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Aquecedor", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Escritorio", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "PrecoVenda", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "AreaUtil", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Conservacao", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "PrecoVendaMinimo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "UnidadeMetrica", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Pais", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "PrecoMedioM2Venda", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "FrenteMar", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "longitude", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Deposito", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "AcessoDeficiente", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "CentroEstetica", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "QtdDormitoriosMaximo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "TVaCabo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Bicicletario", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "CampoFutebol", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "SistemaIncendio", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Lago", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "PortariaControlada", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Hidromassagem", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "PeDireitoAlto", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Telhado", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Restaurante", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "NumeroTorres", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "ServicosEscritorio", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "PrecoLocacao", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "EdificioInteligente", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "DepositoSubsolo", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "CentralTelefonica", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "CodigoImovel", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Closet", namespace = "http://itcld.com/imoveis-ws/schema/bossanova", type = JAXBElement.class, required = false)
     })
     protected List<JAXBElement<?>> content;
 
@@ -533,7 +534,7 @@ public class Imovel {
      * Você está obtendo esta propriedade "catch-all" pelo seguinte motivo: 
      * O nome do campo "AreaVerde" é usado por duas partes diferentes de um esquema. Consulte: 
      * linha 146 de file:/C:/Users/jucelino.queiroz/Documents/workspace-sts-3.7.0.RELEASE/itcld%20app/itcld-ws/src/main/resources/schema/bossa_nova.xsd
-     * linha 100 de file:/C:/Users/jucelino.queiroz/Documents/workspace-sts-3.7.0.RELEASE/itcld%20app/itcld-ws/src/main/resources/schema/bossa_nova.xsd
+     * linha 101 de file:/C:/Users/jucelino.queiroz/Documents/workspace-sts-3.7.0.RELEASE/itcld%20app/itcld-ws/src/main/resources/schema/bossa_nova.xsd
      * <p>
      * Para eliminar esta propriedade, aplique uma personalização de propriedade a uma 
      * das seguintes declarações, a fim de alterar seus nomes: 
@@ -555,23 +556,11 @@ public class Imovel {
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
@@ -587,25 +576,8 @@ public class Imovel {
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
@@ -617,9 +589,90 @@ public class Imovel {
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link Fotos }{@code >}
@@ -627,6 +680,49 @@ public class Imovel {
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Boolean }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link String }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
@@ -634,6 +730,8 @@ public class Imovel {
      * {@link JAXBElement }{@code <}{@link Boolean }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Condominio }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link String }{@code >}
@@ -642,109 +740,40 @@ public class Imovel {
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
      * {@link JAXBElement }{@code <}{@link Boolean }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link String }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Boolean }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
@@ -764,34 +793,7 @@ public class Imovel {
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
-     * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
      * 
      * 

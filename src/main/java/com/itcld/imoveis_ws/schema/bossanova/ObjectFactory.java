@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.7 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2015.12.21 às 04:08:27 PM BRST 
+// Gerado em: 2015.12.22 às 02:16:01 PM BRST 
 //
 
 
@@ -211,6 +211,7 @@ public class ObjectFactory {
     private final static QName _ImovelCozinhaIndependente_QNAME = new QName("http://itcld.com/imoveis-ws/schema/bossanova", "CozinhaIndependente");
     private final static QName _ImovelTelefoneDDR_QNAME = new QName("http://itcld.com/imoveis-ws/schema/bossanova", "TelefoneDDR");
     private final static QName _ImovelPesqueiro_QNAME = new QName("http://itcld.com/imoveis-ws/schema/bossanova", "Pesqueiro");
+    private final static QName _ImovelCondominio_QNAME = new QName("http://itcld.com/imoveis-ws/schema/bossanova", "Condominio");
     private final static QName _ImovelCarpete_QNAME = new QName("http://itcld.com/imoveis-ws/schema/bossanova", "Carpete");
     private final static QName _ImovelAreaTotalMaximo_QNAME = new QName("http://itcld.com/imoveis-ws/schema/bossanova", "AreaTotalMaximo");
     private final static QName _ImovelAguaEncanada_QNAME = new QName("http://itcld.com/imoveis-ws/schema/bossanova", "AguaEncanada");
@@ -326,6 +327,14 @@ public class ObjectFactory {
      */
     public Foto createFoto() {
         return new Foto();
+    }
+
+    /**
+     * Create an instance of {@link Condominio }
+     * 
+     */
+    public Condominio createCondominio() {
+        return new Condominio();
     }
 
     /**
@@ -2082,6 +2091,15 @@ public class ObjectFactory {
     @XmlJavaTypeAdapter(Adapter2 .class)
     public JAXBElement<Long> createImovelPesqueiro(Long value) {
         return new JAXBElement<Long>(_ImovelPesqueiro_QNAME, Long.class, Imovel.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Condominio }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://itcld.com/imoveis-ws/schema/bossanova", name = "Condominio", scope = Imovel.class)
+    public JAXBElement<Condominio> createImovelCondominio(Condominio value) {
+        return new JAXBElement<Condominio>(_ImovelCondominio_QNAME, Condominio.class, Imovel.class, value);
     }
 
     /**
