@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.7 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2015.12.22 às 02:16:01 PM BRST 
+// Gerado em: 2015.12.28 às 11:40:17 AM BRST 
 //
 
 
@@ -37,7 +37,7 @@ import org.w3._2001.xmlschema.Adapter2;
  *         &lt;element name="Bairro" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="Endereco" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="Numero" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="CEP" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="CEP" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="PrecoVenda" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="PrecoLocacao" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="PrecoCondominio" type="{http://www.w3.org/2001/XMLSchema}string"/>
@@ -124,10 +124,8 @@ public class Imovel {
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
     protected Long numero;
-    @XmlElement(name = "CEP", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter2 .class)
-    @XmlSchemaType(name = "long")
-    protected Long cep;
+    @XmlElement(name = "CEP", required = true)
+    protected String cep;
     @XmlElement(name = "PrecoVenda", required = true)
     protected String precoVenda;
     @XmlElement(name = "PrecoLocacao", required = true)
@@ -435,7 +433,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public Long getCEP() {
+    public String getCEP() {
         return cep;
     }
 
@@ -447,7 +445,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public void setCEP(Long value) {
+    public void setCEP(String value) {
         this.cep = value;
     }
 

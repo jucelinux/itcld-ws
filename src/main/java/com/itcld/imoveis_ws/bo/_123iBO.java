@@ -23,16 +23,12 @@ import com.itcld.imoveis_ws.util.SegmentoImovel;
 
 public class _123iBO {
 	
-	private Carga cargaPraia;
-	private Carga cargaCampo;
-	private boolean xmlPraia;
-	private boolean xmlCampo;
+	private Carga cargaPraiaCampo;
+	private boolean xmlPraiaCampo;
 
 	public _123iBO(){
-		cargaPraia = new Carga();
-		cargaCampo = new Carga();
-		cargaPraia.setImoveis(new Imoveis());
-		cargaCampo.setImoveis(new Imoveis());
+		cargaPraiaCampo = new Carga();
+		cargaPraiaCampo.setImoveis(new Imoveis());
 	}
 	
 	public void validaRequest(Imovel123IRequest request){
@@ -57,19 +53,22 @@ public class _123iBO {
 		Imovel imovelValida = imovel;
 		boolean ret = false;
 		
-		if(imovel.getLocal().toLowerCase().contains(AppConst.CAMPO)){
-			xmlCampo = true;
+		if(isPraiaCampo(imovel)){
+			xmlPraiaCampo = true;
 			ret = true;
 			imovelValida.setCodigoCliente(AppConst.COD_CLI);
-			cargaCampo.getImoveis().getImovel().add(imovelValida);
-		}else if(imovel.getLocal().toLowerCase().contains(AppConst.PRAIA)){
-			xmlPraia = true;
-			ret = true;
-			imovelValida.setCodigoCliente(AppConst.COD_CLI);
-			cargaPraia.getImoveis().getImovel().add(imovelValida);
+			cargaPraiaCampo.getImoveis().getImovel().add(imovelValida);
 		}
 		
 		return ret;
+	}
+
+	private boolean isPraiaCampo(Imovel imovel) {
+	return imovel.getLocal().toLowerCase().equals(AppConst.BAHIA) ||
+		   imovel.getLocal().toLowerCase().equals(AppConst.RJ_PRAIA) ||
+		   imovel.getLocal().toLowerCase().equals(AppConst.RJ_SERRA) ||
+		   imovel.getLocal().toLowerCase().equals(AppConst.SP_CAMPO) ||
+		   imovel.getLocal().toLowerCase().equals(AppConst.SP_PRAIA);
 	}
 
 	private void validaImovel(Imovel imovel) {
@@ -217,27 +216,20 @@ public class _123iBO {
 		return check;
 	}
 
-	public Carga getCargaPraia() {
-		return cargaPraia;
+	public Carga getCargaPraiaCampo() {
+		return cargaPraiaCampo;
 	}
 
-	public Carga getCargaCampo() {
-		return cargaCampo;
+	public void setCargaPraiaCampo(Carga cargaPraiaCampo) {
+		this.cargaPraiaCampo = cargaPraiaCampo;
 	}
 
-	public boolean isXmlCampo() {
-		return xmlCampo;
+	public boolean isXmlPraiaCampo() {
+		return xmlPraiaCampo;
 	}
 
-	public void setXmlCampo(boolean xmlCampo) {
-		this.xmlCampo = xmlCampo;
+	public void setXmlPraiaCampo(boolean xmlPraiaCampo) {
+		this.xmlPraiaCampo = xmlPraiaCampo;
 	}
-
-	public boolean isXmlPraia() {
-		return xmlPraia;
-	}
-
-	public void setXmlPraia(boolean xmlPraia) {
-		this.xmlPraia = xmlPraia;
-	}
+	
 }	

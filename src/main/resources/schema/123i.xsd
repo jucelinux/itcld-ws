@@ -57,7 +57,7 @@
 			<xs:element type="xs:string" name="Bairro" minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:string" name="Endereco"/>
 			<xs:element type="xs:long" name="Numero"/>
-			<xs:element type="xs:long"   name="CEP" minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:string"   name="CEP" minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:string" name="PrecoVenda" minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:string" name="PrecoLocacao" minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:string" name="PrecoCondominio" minOccurs="1" maxOccurs="1"/>

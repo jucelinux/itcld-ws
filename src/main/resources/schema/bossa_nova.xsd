@@ -143,7 +143,6 @@
 			<xs:element type="xs:long" name="ArCondicionadoEmbutido"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="ArCondicionadoSplit"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="AreaDeServico"  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="AreaVerde"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="ArmarioDeCozinha"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="ArmarioEmbutido"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:long" name="Banheira"  minOccurs="1" maxOccurs="1"/>

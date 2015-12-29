@@ -108,7 +108,7 @@ public class XML2File {
 	private String getFolder(TipoImobiliaria tipo) {
 		if (tipo.equals(TipoImobiliaria.BOSSANOVA)) {
 			return folderConfig.getDirBossaNova();
-		} else if (tipo.equals(TipoImobiliaria.I123) || tipo.equals(TipoImobiliaria.I123_PRAIA) || tipo.equals(TipoImobiliaria.I123_CAMPO)) {
+		} else if (tipo.equals(TipoImobiliaria.I123) || tipo.equals(TipoImobiliaria.I123_PRAIA_CAMPO)) {
 			return folderConfig.getDir123i();
 		} else if (tipo.equals(TipoImobiliaria.IMOVELWEB)) {
 			return folderConfig.getDirImovelWeb();
