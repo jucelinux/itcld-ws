@@ -35,9 +35,9 @@
     <xs:complexType name="Imovel">
 		<xs:sequence>
 			<xs:element type="tns:Condominio" name="Condominio" minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="PosicaoDestaque"  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="PosicaoSuperDestaque "  minOccurs="1" maxOccurs="1"/>
-			<xs:element type="xs:long" name="PublicarValorSite "  minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:string" name="PosicaoDestaque"  minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:string" name="PosicaoSuperDestaque "  minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:string" name="PublicarValorSite "  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:string" name="CodigoImovel"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:string" name="DataCadastro"  minOccurs="1" maxOccurs="1"/>
 			<xs:element type="xs:string" name="DataAtualizacao"  minOccurs="1" maxOccurs="1"/>

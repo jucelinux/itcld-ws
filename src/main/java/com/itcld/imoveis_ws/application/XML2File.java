@@ -11,6 +11,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
+import javax.xml.bind.PropertyException;
 import javax.xml.namespace.QName;
 
 import org.slf4j.Logger;
@@ -20,6 +21,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.stereotype.Component;
 
 import com.itcld.imoveis_ws.util.FolderConfig;
+import com.itcld.imoveis_ws.util.MyNamespaceMapper;
 import com.itcld.imoveis_ws.util.TipoImobiliaria;
 
 @Component
