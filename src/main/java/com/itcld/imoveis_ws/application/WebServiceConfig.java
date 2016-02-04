@@ -68,5 +68,20 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 		return new SimpleXsdSchema(new ClassPathResource("/schema/viva_real.xsd"));
 	}
 	
+	@Bean(name = "moving")
+	public DefaultWsdl11Definition _MovingWsdlDefinition(XsdSchema MovingSchema) {
+		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
+		wsdl11Definition.setPortTypeName("MovingPort");
+		wsdl11Definition.setLocationUri("/ws");
+		wsdl11Definition.setTargetNamespace("http://itcld.com/imoveis-ws/schema/moving");
+		wsdl11Definition.setSchema(MovingSchema);
+		return wsdl11Definition;
+	}
+	
+	@Bean
+	public XsdSchema MovingSchema() {
+		return new SimpleXsdSchema(new ClassPathResource("/schema/moving.xsd"));
+	}
+	
 	
 }

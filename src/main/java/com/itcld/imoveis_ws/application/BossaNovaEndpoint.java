@@ -12,6 +12,8 @@ import com.itcld.imoveis_ws.schema.bossanova.ImovelBossaNovaRequest;
 import com.itcld.imoveis_ws.schema.bossanova.ImovelBossaNovaResponse;
 import com.itcld.imoveis_ws.util.TipoImobiliaria;
 
+import static com.itcld.imoveis_ws.util.AppConst.QNAME;
+
 @Endpoint
 public class BossaNovaEndpoint {
 	
@@ -19,7 +21,6 @@ public class BossaNovaEndpoint {
 	private XML2File parser;
 	
 	private static final String NAMESPACE_URI = "http://itcld.com/imoveis-ws/schema/bossanova";
-	private static final String QNAME = "Carga";
 	
 	@PostConstruct
 	public void init() {
@@ -28,8 +29,11 @@ public class BossaNovaEndpoint {
 	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "imovelBossaNovaRequest")
 	@ResponsePayload
 	public ImovelBossaNovaResponse imovelBossaNovaRequest(@RequestPayload ImovelBossaNovaRequest request) {
-		ImovelBossaNovaResponse response = new ImovelBossaNovaResponse();
+		
 		parser.marshall(request.getCarga().getClass(), request.getCarga(), QNAME, TipoImobiliaria.BOSSANOVA);
+		parser.marshall(request.getCarga().getClass(), request.getCarga(), QNAME, TipoImobiliaria.BOSSANOVA_LOG);
+		
+		ImovelBossaNovaResponse response = new ImovelBossaNovaResponse();
 		return response;
 	}
 	

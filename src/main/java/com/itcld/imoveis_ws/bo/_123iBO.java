@@ -10,9 +10,6 @@ import static com.itcld.imoveis_ws.util.AppUtils.PISO_MADEIRA_2;
 import static com.itcld.imoveis_ws.util.AppUtils.checkLongOrConditions;
 import static com.itcld.imoveis_ws.util.SegmentoImovel.getSegmentoImovel;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.itcld.imoveis_ws.schema._123i.Carga;
 import com.itcld.imoveis_ws.schema._123i.Carga.Imoveis;
 import com.itcld.imoveis_ws.schema._123i.Imovel;
@@ -24,43 +21,34 @@ import com.itcld.imoveis_ws.util.SegmentoImovel;
 public class _123iBO {
 	
 	private Carga cargaPraiaCampo;
-	private boolean xmlPraiaCampo;
-
+	private Carga cargaNormal;
+	
 	public _123iBO(){
 		cargaPraiaCampo = new Carga();
 		cargaPraiaCampo.setImoveis(new Imoveis());
+		cargaNormal = new Carga();
+		cargaNormal.setImoveis(new Imoveis());
 	}
 	
 	public void validaRequest(Imovel123IRequest request){
 		
 		Imoveis imoveis = request.getCarga().getImoveis();
-		List<Imovel> listaRemocao = new ArrayList<Imovel>();
 		
 		for(Imovel imovel : imoveis.getImovel()){
-			validaImovel(imovel);
-			if(validaTipo(imovel)){
-				listaRemocao.add(imovel);
-			}
+//			validaImovel(imovel);
+			validaTipoImovel(imovel);
 		}
 		
-		for(Imovel imovel : listaRemocao){
-			request.getCarga().getImoveis().getImovel().remove(imovel);
-		}
 	}
 
-	private boolean validaTipo(Imovel imovel) {
-		
-		Imovel imovelValida = imovel;
-		boolean ret = false;
-		
-		if(isPraiaCampo(imovel)){
-			xmlPraiaCampo = true;
-			ret = true;
+	private void validaTipoImovel(Imovel imovel) {
+ 		Imovel imovelValida = imovel;
+		if(isPraiaCampo(imovelValida)){
 			imovelValida.setCodigoCliente(AppConst.COD_CLI);
 			cargaPraiaCampo.getImoveis().getImovel().add(imovelValida);
+		}else{
+			cargaNormal.getImoveis().getImovel().add(imovelValida);
 		}
-		
-		return ret;
 	}
 
 	private boolean isPraiaCampo(Imovel imovel) {
@@ -224,12 +212,11 @@ public class _123iBO {
 		this.cargaPraiaCampo = cargaPraiaCampo;
 	}
 
-	public boolean isXmlPraiaCampo() {
-		return xmlPraiaCampo;
+	public Carga getCargaNormal() {
+		return cargaNormal;
 	}
 
-	public void setXmlPraiaCampo(boolean xmlPraiaCampo) {
-		this.xmlPraiaCampo = xmlPraiaCampo;
+	public void setCargaNormal(Carga cargaNormal) {
+		this.cargaNormal = cargaNormal;
 	}
-	
 }	

@@ -8,4 +8,5 @@ public class AppConst {
 	public static String BAHIA 	  = "bahia";
 	
 	public static String COD_CLI = "amalagoni@bossanovasir.com.br";
+	public static String QNAME = "Carga";
 }

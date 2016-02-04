@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.7 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2015.12.28 às 11:40:17 AM BRST 
+// Gerado em: 2016.02.04 às 09:43:18 AM BRST 
 //
 
 
@@ -28,9 +28,9 @@ import org.w3._2001.xmlschema.Adapter2;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="Condominio" type="{http://itcld.com/imoveis-ws/schema/bossanova}Condominio"/>
- *         &lt;element name="PosicaoDestaque" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="PosicaoSuperDestaque " type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="PublicarValorSite " type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="PosicaoDestaque" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="PosicaoSuperDestaque " type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="PublicarValorSite " type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="CodigoImovel" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="DataCadastro" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="DataAtualizacao" type="{http://www.w3.org/2001/XMLSchema}string"/>
@@ -522,18 +522,12 @@ public class Imovel {
 
     @XmlElement(name = "Condominio", required = true)
     protected Condominio condominio;
-    @XmlElement(name = "PosicaoDestaque", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter2 .class)
-    @XmlSchemaType(name = "long")
-    protected Long posicaoDestaque;
-    @XmlElement(name = "PosicaoSuperDestaque ", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter2 .class)
-    @XmlSchemaType(name = "long")
-    protected Long posicaoSuperDestaque0020;
-    @XmlElement(name = "PublicarValorSite ", required = true, type = String.class)
-    @XmlJavaTypeAdapter(Adapter2 .class)
-    @XmlSchemaType(name = "long")
-    protected Long publicarValorSite0020;
+    @XmlElement(name = "PosicaoDestaque", required = true)
+    protected String posicaoDestaque;
+    @XmlElement(name = "PosicaoSuperDestaque ", required = true)
+    protected String posicaoSuperDestaque0020;
+    @XmlElement(name = "PublicarValorSite ", required = true)
+    protected String publicarValorSite0020;
     @XmlElement(name = "CodigoImovel", required = true)
     protected String codigoImovel;
     @XmlElement(name = "DataCadastro", required = true)
@@ -1419,7 +1413,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public Long getPosicaoDestaque() {
+    public String getPosicaoDestaque() {
         return posicaoDestaque;
     }
 
@@ -1431,7 +1425,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public void setPosicaoDestaque(Long value) {
+    public void setPosicaoDestaque(String value) {
         this.posicaoDestaque = value;
     }
 
@@ -1443,7 +1437,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public Long getPosicaoSuperDestaque_0020() {
+    public String getPosicaoSuperDestaque_0020() {
         return posicaoSuperDestaque0020;
     }
 
@@ -1455,7 +1449,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public void setPosicaoSuperDestaque_0020(Long value) {
+    public void setPosicaoSuperDestaque_0020(String value) {
         this.posicaoSuperDestaque0020 = value;
     }
 
@@ -1467,7 +1461,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public Long getPublicarValorSite_0020() {
+    public String getPublicarValorSite_0020() {
         return publicarValorSite0020;
     }
 
@@ -1479,7 +1473,7 @@ public class Imovel {
      *     {@link String }
      *     
      */
-    public void setPublicarValorSite_0020(Long value) {
+    public void setPublicarValorSite_0020(String value) {
         this.publicarValorSite0020 = value;
     }
 

@@ -1,7 +1,5 @@
 package com.itcld.imoveis_ws.application;
 
-import javax.annotation.PostConstruct;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
@@ -13,6 +11,8 @@ import com.itcld.imoveis_ws.schema._123i.Imovel123IRequest;
 import com.itcld.imoveis_ws.schema._123i.Imovel123IResponse;
 import com.itcld.imoveis_ws.util.TipoImobiliaria;
 
+import static com.itcld.imoveis_ws.util.AppConst.QNAME;
+
 @Endpoint
 public class _123iEndpoint {
 	
@@ -22,26 +22,20 @@ public class _123iEndpoint {
 	private _123iBO bo;
 	
 	private static final String NAMESPACE_URI = "http://itcld.com/imoveis-ws/schema/123i";
-	private static final String QNAME = "Carga";
 	
-	@PostConstruct
-	public void init() {
-		bo = new _123iBO();
-	}
 	
 	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "imovel123iRequest")
 	@ResponsePayload
 	public Imovel123IResponse imovel123iRequest(@RequestPayload Imovel123IRequest request) {
 		
-		Imovel123IResponse response = new Imovel123IResponse();
-		
+		bo = new _123iBO();
 		bo.validaRequest(request);
 		
-		parser.marshall(request.getCarga().getClass(), request.getCarga(), QNAME, TipoImobiliaria.I123);
+		parser.marshall(request.getCarga().getClass(), request.getCarga(), QNAME, TipoImobiliaria.I123_LOG);
+		parser.marshall(bo.getCargaNormal().getClass(), bo.getCargaNormal(), QNAME, TipoImobiliaria.I123);
+		parser.marshall(bo.getCargaPraiaCampo().getClass(), bo.getCargaPraiaCampo(), QNAME, TipoImobiliaria.I123_PRAIA_CAMPO);
 		
-		if(bo.isXmlPraiaCampo())
-			parser.marshall(bo.getCargaPraiaCampo().getClass(), bo.getCargaPraiaCampo(), QNAME, TipoImobiliaria.I123_PRAIA_CAMPO);
-		
+		Imovel123IResponse response = new Imovel123IResponse();
 		return response;
 	}
 	
