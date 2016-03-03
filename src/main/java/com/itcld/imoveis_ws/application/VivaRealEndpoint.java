@@ -12,8 +12,6 @@ import com.itcld.imoveis_ws.util.TipoImobiliaria;
 import com.vivareal.feeds.vrsync.ImovelVivaRealRequest;
 import com.vivareal.feeds.vrsync.ImovelVivaRealResponse;
 
-import static com.itcld.imoveis_ws.util.AppConst.QNAME;
-
 @Endpoint
 public class VivaRealEndpoint {
 	
@@ -26,12 +24,12 @@ public class VivaRealEndpoint {
 	public void init() {
 	}
 	
-	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "ListingDataFeed")
+	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "imovelVivaRealRequest")
 	@ResponsePayload
 	public ImovelVivaRealResponse imovelVivaRealRequest(@RequestPayload ImovelVivaRealRequest request) {
 		
-		parser.marshall(request.getListingDataFeed().getClass(), request.getListingDataFeed(), QNAME, TipoImobiliaria.VIVAREAL);
-		parser.marshall(request.getListingDataFeed().getClass(), request.getListingDataFeed(), QNAME, TipoImobiliaria.VIVAREAL_LOG);
+		parser.marshall(request.getListingDataFeed().getClass(), request.getListingDataFeed(), "ListingDataFeed", TipoImobiliaria.VIVAREAL);
+		parser.marshall(request.getListingDataFeed().getClass(), request.getListingDataFeed(), "ListingDataFeed", TipoImobiliaria.VIVAREAL_LOG);
 		
 		ImovelVivaRealResponse response = new ImovelVivaRealResponse();
 		return response;

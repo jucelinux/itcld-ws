@@ -12,7 +12,7 @@ import com.itcld.imoveis_ws.schema.bossanova.ImovelBossaNovaRequest;
 import com.itcld.imoveis_ws.schema.bossanova.ImovelBossaNovaResponse;
 import com.itcld.imoveis_ws.util.TipoImobiliaria;
 
-import static com.itcld.imoveis_ws.util.AppConst.QNAME;
+import static com.itcld.imoveis_ws.util.AppConst.QNAME_CARGA;
 
 @Endpoint
 public class BossaNovaEndpoint {
@@ -30,8 +30,8 @@ public class BossaNovaEndpoint {
 	@ResponsePayload
 	public ImovelBossaNovaResponse imovelBossaNovaRequest(@RequestPayload ImovelBossaNovaRequest request) {
 		
-		parser.marshall(request.getCarga().getClass(), request.getCarga(), QNAME, TipoImobiliaria.BOSSANOVA);
-		parser.marshall(request.getCarga().getClass(), request.getCarga(), QNAME, TipoImobiliaria.BOSSANOVA_LOG);
+		parser.marshall(request.getCarga().getClass(), request.getCarga(), QNAME_CARGA, TipoImobiliaria.BOSSANOVA);
+		parser.marshall(request.getCarga().getClass(), request.getCarga(), QNAME_CARGA, TipoImobiliaria.BOSSANOVA_LOG);
 		
 		ImovelBossaNovaResponse response = new ImovelBossaNovaResponse();
 		return response;

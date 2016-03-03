@@ -11,7 +11,7 @@ import com.itcld.imoveis_ws.schema._123i.Imovel123IRequest;
 import com.itcld.imoveis_ws.schema._123i.Imovel123IResponse;
 import com.itcld.imoveis_ws.util.TipoImobiliaria;
 
-import static com.itcld.imoveis_ws.util.AppConst.QNAME;
+import static com.itcld.imoveis_ws.util.AppConst.QNAME_CARGA;
 
 @Endpoint
 public class _123iEndpoint {
@@ -31,9 +31,9 @@ public class _123iEndpoint {
 		bo = new _123iBO();
 		bo.validaRequest(request);
 		
-		parser.marshall(request.getCarga().getClass(), request.getCarga(), QNAME, TipoImobiliaria.I123_LOG);
-		parser.marshall(bo.getCargaNormal().getClass(), bo.getCargaNormal(), QNAME, TipoImobiliaria.I123);
-		parser.marshall(bo.getCargaPraiaCampo().getClass(), bo.getCargaPraiaCampo(), QNAME, TipoImobiliaria.I123_PRAIA_CAMPO);
+		parser.marshall(request.getCarga().getClass(), request.getCarga(), QNAME_CARGA, TipoImobiliaria.I123_LOG);
+		parser.marshall(bo.getCargaNormal().getClass(), bo.getCargaNormal(), QNAME_CARGA, TipoImobiliaria.I123);
+		parser.marshall(bo.getCargaPraiaCampo().getClass(), bo.getCargaPraiaCampo(), QNAME_CARGA, TipoImobiliaria.I123_PRAIA_CAMPO);
 		
 		Imovel123IResponse response = new Imovel123IResponse();
 		return response;

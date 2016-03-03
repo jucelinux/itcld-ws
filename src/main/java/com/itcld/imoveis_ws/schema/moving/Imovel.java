@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.7 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2016.02.04 às 10:50:34 AM BRST 
+// Gerado em: 2016.03.02 às 09:49:38 AM BRT 
 //
 
 
@@ -37,6 +37,7 @@ import org.w3._2001.xmlschema.Adapter2;
  *         &lt;element name="Bairro" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="Endereco" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="Numero" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="Estado" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="CEP" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="PrecoVenda" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="PrecoLocacao" type="{http://www.w3.org/2001/XMLSchema}string"/>
@@ -78,6 +79,7 @@ import org.w3._2001.xmlschema.Adapter2;
     "bairro",
     "endereco",
     "numero",
+    "estado",
     "cep",
     "precoVenda",
     "precoLocacao",
@@ -124,6 +126,8 @@ public class Imovel {
     @XmlJavaTypeAdapter(Adapter2 .class)
     @XmlSchemaType(name = "long")
     protected Long numero;
+    @XmlElement(name = "Estado", required = true)
+    protected String estado;
     @XmlElement(name = "CEP", required = true)
     protected String cep;
     @XmlElement(name = "PrecoVenda", required = true)
@@ -423,6 +427,30 @@ public class Imovel {
      */
     public void setNumero(Long value) {
         this.numero = value;
+    }
+
+    /**
+     * Obtém o valor da propriedade estado.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getEstado() {
+        return estado;
+    }
+
+    /**
+     * Define o valor da propriedade estado.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setEstado(String value) {
+        this.estado = value;
     }
 
     /**
